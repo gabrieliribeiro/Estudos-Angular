@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./exemplo-if.component.scss']
 })
 export class ExemploIfComponent {
-
+  isLoggedIn: boolean = true;
 }

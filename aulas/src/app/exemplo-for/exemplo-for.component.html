@@ -1,1 +1,23 @@
-<p>exemplo-for works!</p>
+<!--Arrumar saída-->
+<header>
+    <h1>Exemplo de For!</h1>
+</header>
+
+
+<table cellSpacing="0">
+    <tr>
+        <td class="title">Nome</td>
+        <td class="title">Role</td>
+    </tr>
+    <tr *ngFor="let user of users"  [ngClass]="getUserClass(user.role)" (click)="changeBackground(user)">
+        <td>{{ user.name }}</td>
+        <td>{{ user.role }}</td>
+    </tr>
+</table>
+
+<br />
+<div *ngIf="nameSelected != ''">
+    <h2 [ngClass]="getUserClass(roleSelected)">{{ nameSelected }}</h2>
+    <h2 [ngClass]="getUserClass(roleSelected)">{{ roleSelected }}</h2>
+</div>
+

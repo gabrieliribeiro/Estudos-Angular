@@ -15,6 +15,7 @@ import { ExemploForComponent } from './exemplo-for/exemplo-for.component';
 import { ExemploSwitchComponent } from './exemplo-switch/exemplo-switch.component';
 import { ExemploPipesComponent } from './exemplo-pipes/exemplo-pipes.component';
 import { MicroondasComponent } from './microondas/microondas.component';
+import { OrganoComponent } from './organo/organo.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { MicroondasComponent } from './microondas/microondas.component';
     ExemploForComponent,
     ExemploSwitchComponent,
     ExemploPipesComponent,
-    MicroondasComponent
+    MicroondasComponent,
+    OrganoComponent
   ],
   imports: [
     BrowserModule,
