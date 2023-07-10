@@ -9,6 +9,7 @@ import { ExemploIfComponent } from './exemplo-if/exemplo-if.component';
 import { ExemploForComponent } from './exemplo-for/exemplo-for.component';
 import { ExemploSwitchComponent } from './exemplo-switch/exemplo-switch.component';
 import { ExemploPipesComponent } from './exemplo-pipes/exemplo-pipes.component';
+import { MicroondasComponent } from './microondas/microondas.component';
 
 const routes: Routes = [
   {path: "exemplo-binding", component: ExemploBindingComponent},
@@ -20,6 +21,7 @@ const routes: Routes = [
   {path: "exemplo-for", component: ExemploForComponent},
   {path: "exemplo-switch", component: ExemploSwitchComponent},
   {path: "exemplo-pipes", component: ExemploPipesComponent},
+  {path: "microondas", component:MicroondasComponent}
 ];
 
 @NgModule({

@@ -1,1 +1,26 @@
-<p>microondas works!</p>
+<div class="container">
+    <div class="contador" id="contador" [ngClass]="{'paused': isPaused}">
+        <h2>{{ formatTime() }}</h2>
+    </div>
+
+    <div class="teclado">
+        <button (click)="addDigit(7)">7</button>
+        <button (click)="addDigit(8)">8</button>
+        <button (click)="addDigit(9)">9</button>
+        <br/>
+        <button (click)="addDigit(4)">4</button>
+        <button (click)="addDigit(5)">5</button>
+        <button (click)="addDigit(6)">6</button>
+        <br/>
+        <button (click)="addDigit(1)">1</button>
+        <button (click)="addDigit(2)">2</button>
+        <button (click)="addDigit(3)">3</button>
+        <br/>
+        <button (click)="addTime(30)">+30s</button>
+        <button (click)="addDigit(0)">0</button>
+        <button (click)="addTime(60)">+1min</button>
+        <br/>
+        <button class="cancelar" (click)="cancelMicrowave()" [disabled]="time === 0">Cancelar</button>
+        <button class="iniciar" (click)="startMicrowave()" [disabled]="time === 0">Iniciar</button>
+    </div>
+</div>

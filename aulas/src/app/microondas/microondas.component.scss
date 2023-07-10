@@ -1,0 +1,63 @@
+$transition-duration: 0.3s;
+.container {
+  text-align: center;
+  background-color: #bdbebf;
+  width: 550px;
+  height: 600px;
+  border-radius: 10px;
+  padding: 40px;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.308);
+}
+
+.contador {
+  background-color: #0d0d0d;
+  width: 450px;
+  height: 110px;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.308);
+
+  h2 {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 100;
+    color: #ced979;
+    padding: 4%;
+    font-size: 56px;
+  }
+}
+
+.paused {
+    h2 {
+        color: #e9f0b9;
+    }
+  }
+
+button {
+  height: 80px;
+  width: 100px;
+  margin: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #737373;
+  font-size: 20px;
+}
+
+button:hover {
+  background-color: #505050;
+}
+
+button {
+    &:focus {
+        color: #D2D9A0;
+        transition: background-color $transition-duration; // Aplica a transição com a duração definida
+    }
+}
