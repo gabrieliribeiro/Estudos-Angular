@@ -1,49 +1,95 @@
-header {
-    height: 100px;
-    text-align: center;
-    margin-top: 24px;
-    padding-top: 20px;
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .form {
+    width: 400px;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 10px;
+  }
+  
+  label {
+    display: block;
+  }
+  
+  button {
+    display: block;
     padding: 10px;
-    vertical-align: middle;
-}
-header > h1 {
-    color: #274b59;
-    font-weight: 700;
-    font-size: 50px;
-    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.473);
-}
-
-table{
-    border: 1px solid black;
-    border-radius: 10px;
-    box-shadow: 10px rgba(0, 0, 0, 0.473);
-    width: 30%;
-}
-
-.title{
-    font-weight: bolder;
-    font-size: 16px;
-}
-
-table td{
-    text-align: center;
-}
-
-
-.admin{
-    background-color: green;
+    background-color: #007bff;
     color: white;
-    font-weight: bolder;
-}
-
-.moderator{
-    background-color:#274b59;
-    color: white;
-    font-weight: bolder;
-}
-
-.user{
-    background-color: rebeccapurple;
-    color: white;
-    font-weight: bolder;
-}
+    border: none;
+    cursor: pointer;
+  }
+  
+  .time {
+    width: 400px;
+  }
+  
+  .time-card {
+    display: flex;
+    align-items: center;
+    background-color: #f2f2f2;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .time-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .time-color {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
+  
+  .time-name {
+    font-weight: bold;
+  }
+  
+  .pessoas {
+    margin-top: 20px;
+  }
+  
+  .pessoa-card {
+    display: flex;
+    align-items: center;
+    background-color: #f2f2f2;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .pessoa-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .pessoa-color {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
+  
+  .pessoa-name {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .pessoa-funcao {
+    color: #666666;
+    margin-right: 10px;
+  }
+  
+  .pessoa-foto img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  

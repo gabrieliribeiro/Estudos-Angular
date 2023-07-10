@@ -11,11 +11,11 @@
     <br />
     <label for="sexo">Sexo: </label>
     <label>
-    <input type="radio" name="genero" value="masculino" checked />
+    <input type="radio" name="genero" value="masculino" [(ngModel)]="sexo"/>
     Masculino
     </label>
     <label>
-    <input type="radio" name="genero" value="feminino" />
+    <input type="radio" name="genero" value="feminino" [(ngModel)]="sexo" />
     Feminino
     </label>
     <br />
@@ -25,7 +25,15 @@
     <label for="altura">Altura (m):</label>
     <input type="number" step=".01" id="altura" placeholder="Digite a altura" [(ngModel)]="altura"/>
     <br />
-    <button (click)="calculaImc()">Calcular</button>
-    <div class="resultado" id="resultadoImc"></div>
-    <div class="img-container"><img [src]="retornaImagem()" alt="imagem"/></div>
+    <button (click)="calculaImc()" type="submit" [disabled]="peso == 0">Calcular</button>
+    <div class="resultado" id="resultadoImc">      
+        <textarea
+            type="text"
+            id="dados"
+            class="dados"
+            name="dados"
+            rows="5"
+            readonly
+      ></textarea></div>
+      <div class="resultado" id="txtAvaliacao" ></div>
 </div>

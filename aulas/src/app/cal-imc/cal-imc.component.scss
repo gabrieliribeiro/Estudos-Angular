@@ -20,8 +20,6 @@ header > p {
     padding-right: 10px;
     padding-left: 10px;
     margin: auto;
-
-    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.26);
 }
 
 .container {
@@ -141,10 +139,15 @@ header > p {
     background-color: #274b59;
 }
 
-.resultado {
+
+textarea{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #fff;
     width: 475px;
-    height: 35px;
     font-weight: bold;
     text-align: center;
     margin-top: 20px;

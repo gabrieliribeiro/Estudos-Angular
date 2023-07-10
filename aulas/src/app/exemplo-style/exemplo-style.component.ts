@@ -3,21 +3,14 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-exemplo-style',
   templateUrl: './exemplo-style.component.html',
-  styleUrls: ['./exemplo-style.component.scss']
+  styleUrls: ['./exemplo-style.component.scss'],
 })
 export class ExemploStyleComponent {
-  /**public currentTheme: String = ''; 
+  isDarkMode = false;
 
-  escolheTema(){
-    if (this.currentTheme === 'claro') {
-        this.mudaTema();
-    } else if (this.currentTheme === 'escuro') {
-      this.mudaTema();
-    }
+  toggleDarkMode(event: Event): void {
+    const target = event.target as HTMLInputElement;
+    this.isDarkMode = target.checked;
+    document.body.classList.toggle('dark', this.isDarkMode);
   }
-
-  mudaTema() {
-    this.currentTheme = this.currentTheme === 'claro'?'escuro':'claro';
-  }*/
 }
-

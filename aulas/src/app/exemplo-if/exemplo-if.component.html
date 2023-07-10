@@ -1,5 +1,25 @@
-<!--Fazer um login-->
+<body>
+  <div class="container">
+    <h1>Login</h1>
+    <div class="form">
+      <label for="username">Usuário:</label>
+      <input type="text" id="username" [(ngModel)]="user">
+      <br/>  
+      <label for="password">Senha:</label>
+      <input type="password" id="password" [(ngModel)]="password">
+      <br/>
+      <div class="error-message" *ngIf="invalidLogin">
+        Usuário ou senha inválidos.
+      </div>
+      <button (click)="login()">Login</button>
+    </div>
 
-<div *ngIf="isLoggedIn">
-  Bem vindo! Você está logado.
-</div> 
+    <div class="popup" *ngIf="showSuccessPopup">
+      <div class="popup-content">
+        <h3>Login Realizado com Sucesso!</h3>
+        <p>Seu login foi realizado com sucesso.</p>
+        <button class="botao-popup" (click)="closePopup()">Fechar</button>
+      </div>
+    </div>
+  </div>
+</body>

@@ -1,5 +1,25 @@
-<!--Achar uma propostra melhor para este exemplo!-->
-
-<div>
-    <button [ngClass]="buttonClass">Rave Button</button>
+<header>
+    <h1>Exemplo ngClass</h1>
+</header>
+<div class="publication" [ngClass]="{ 'favorited': isFavorited, 'not-favorited': !isFavorited }">
+    <div class="profile-header">
+        <img src="https://i.pinimg.com/550x/dd/e6/6c/dde66c9ce6aa9d6b4484ba1458f5c3a4.jpg" alt="Foto do perfil do clebinho" class="profile-picture">
+        <h2 class="profile-name">Clebinho o Hamster</h2>
+    </div>
+    <div class="img-container">
+        <img [src]="retornaImagem()" alt="imagem">
+    </div>
+    <div class="content">
+        <div class="description">
+            <p>{{ publication.description }}</p>
+        </div>
+        <button (click)="toggleFavorite()">
+            <div class="favorito">
+                <img [src]="isFavorited ? notFavorited() : favorite()" alt="imagem">
+                {{ isFavorited ? 'Desfavoritar' : 'Favoritar' }}
+            </div> 
+        </button>
+    </div>
 </div>
+
+

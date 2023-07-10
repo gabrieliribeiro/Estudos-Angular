@@ -1,36 +1,55 @@
 import { Component } from '@angular/core';
 
+interface Pessoa {
+  nome: string;
+  funcao: string;
+  fotoUrl: string;
+}
+
 @Component({
   selector: 'app-exemplo-for',
   templateUrl: './exemplo-for.component.html',
   styleUrls: ['./exemplo-for.component.scss']
 })
 export class ExemploForComponent {
-  nameSelected : string = "";
-  roleSelected: string = "";
+  nomeTime: string = '';
+  corTime: string = '';
+  nomePessoa: string = '';
+  funcaoPessoa: string = '';
+  fotoPessoa: File | null = null;
+  pessoas: Pessoa[] = [];
 
+  cadastrarTime() {
+    // Lógica para cadastrar o time no servidor ou armazenar localmente
+    console.log('Time cadastrado:', this.nomeTime, this.corTime);
+  }
 
-  users = [
-    { name: 'João', role: 'Administrador' },
-    { name: 'Maria', role: 'Moderador' },
-    { name: 'Pedro', role: 'Usuário' }
-  ];
+  cadastrarPessoa() {
+    if (this.fotoPessoa) {
+      // Lógica para fazer upload da foto da pessoa e obter a URL
+      const fotoUrl = 'https://example.com/foto-pessoa.jpg';
 
-  getUserClass(role: string) {
-    switch (role) {
-      case 'Administrador':
-        return 'admin';
-      case 'Moderador':
-        return 'moderator';
-      case 'Usuário':
-        return 'user';
-      default:
-        return '';
+      const pessoa: Pessoa = {
+        nome: this.nomePessoa,
+        funcao: this.funcaoPessoa,
+        fotoUrl: fotoUrl
+      };
+
+      this.pessoas.push(pessoa);
+
+      // Limpar os campos do formulário
+      this.nomePessoa = '';
+      this.funcaoPessoa = '';
+      this.fotoPessoa = null;
+
+      console.log('Pessoa cadastrada:', pessoa);
     }
   }
 
-  changeBackground(user: any) {
-    this.nameSelected = user.name;
-    this.roleSelected = user.role;
+  handleFotoUpload(event: Event) {
+    const inputElement = event.target as HTMLInputElement;
+    if (inputElement.files && inputElement.files.length > 0) {
+      this.fotoPessoa = inputElement.files[0];
+    }
   }
 }

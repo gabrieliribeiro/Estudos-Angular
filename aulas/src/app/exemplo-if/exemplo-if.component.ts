@@ -6,5 +6,27 @@ import { Component } from '@angular/core';
   styleUrls: ['./exemplo-if.component.scss']
 })
 export class ExemploIfComponent {
-  isLoggedIn: boolean = true;
+  user: string = '';
+  password: string = '';
+  loggedIn: boolean = false;
+  invalidLogin: boolean = false;
+  showSuccessPopup: boolean = false;
+
+  login() {
+    if (this.user === 'usuario' && this.password === '123') {
+      this.showSuccessPopup = true;
+      this.invalidLogin = false;
+      this.user = '';
+      this.password = '';
+    } else {
+      this.showSuccessPopup = false;
+      this.invalidLogin = true;
+      this.user = '';
+      this.password = '';
+    }
+  }
+
+  closePopup() {
+    this.showSuccessPopup = false;
+  }
 }

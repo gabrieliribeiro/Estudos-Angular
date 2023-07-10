@@ -1,2 +1,8 @@
-<!--Conseguir um bom exemplo de model-->
-<p>exemplo-model works!</p>
+<div class="container">
+    <input type="text" [(ngModel)] = "title">
+    <h2>{{title}}</h2>
+    <button (click)="adicionarTitulo()">Adicionar</button>
+    <ul>
+        <li *ngFor="let titulo of titulos">{{titulo}}</li>
+    </ul>
+</div>

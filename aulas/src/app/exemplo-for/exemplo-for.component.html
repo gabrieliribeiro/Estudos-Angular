@@ -1,23 +1,62 @@
-<!--Arrumar saída-->
-<header>
-    <h1>Exemplo de For!</h1>
-</header>
-
-
-<table cellSpacing="0">
-    <tr>
-        <td class="title">Nome</td>
-        <td class="title">Role</td>
-    </tr>
-    <tr *ngFor="let user of users"  [ngClass]="getUserClass(user.role)" (click)="changeBackground(user)">
-        <td>{{ user.name }}</td>
-        <td>{{ user.role }}</td>
-    </tr>
-</table>
-
-<br />
-<div *ngIf="nameSelected != ''">
-    <h2 [ngClass]="getUserClass(roleSelected)">{{ nameSelected }}</h2>
-    <h2 [ngClass]="getUserClass(roleSelected)">{{ roleSelected }}</h2>
-</div>
+<div class="container">
+    <h2>Cadastro de Time</h2>
+  
+    <div class="form">
+      <h3>Cadastrar Time</h3>
+      <form (ngSubmit)="cadastrarTime()" #timeForm="ngForm">
+        <div class="form-group">
+          <label for="timeNome">Nome do Time:</label>
+          <input type="text" id="timeNome" name="timeNome" [(ngModel)]="nomeTime" required>
+        </div>
+        <div class="form-group">
+          <label for="timeCor">Cor do Time:</label>
+          <input type="color" id="timeCor" name="timeCor" [(ngModel)]="corTime" required>
+        </div>
+        <button type="submit">Cadastrar</button>
+      </form>
+    </div>
+  
+    <div class="form">
+      <h3>Cadastrar Pessoa</h3>
+      <form (ngSubmit)="cadastrarPessoa()" #pessoaForm="ngForm">
+        <div class="form-group">
+          <label for="pessoaNome">Nome da Pessoa:</label>
+          <input type="text" id="pessoaNome" name="pessoaNome" [(ngModel)]="nomePessoa" required>
+        </div>
+        <div class="form-group">
+          <label for="pessoaFuncao">Função:</label>
+          <input type="text" id="pessoaFuncao" name="pessoaFuncao" [(ngModel)]="funcaoPessoa" required>
+        </div>
+        <div class="form-group">
+          <label for="pessoaFoto">Foto:</label>
+          <input type="file" id="pessoaFoto" name="pessoaFoto" (change)="handleFotoUpload($event)" required>
+        </div>
+        <button type="submit">Cadastrar</button>
+      </form>
+    </div>
+  
+    <div class="time">
+      <h3>Time Cadastrado</h3>
+      <div class="time-card">
+        <div class="time-info">
+          <div class="time-color" [style.background]="corTime"></div>
+          <div class="time-name">{{ nomeTime }}</div>
+        </div>
+      </div>
+      <div class="pessoas">
+        <h4>Pessoas do Time</h4>
+        <div class="pessoa-card" *ngFor="let pessoa of pessoas">
+          <div class="pessoa-info">
+            <div class="pessoa-color" [style.background]="corTime"></div>
+            <div class="pessoa-name">{{ pessoa.nome }}</div>
+            <div class="pessoa-funcao">{{ pessoa.funcao }}</div>
+          </div>
+          <div class="pessoa-foto">
+            <img [src]="pessoa.fotoUrl" alt="Foto de {{ pessoa.nome }}">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
 

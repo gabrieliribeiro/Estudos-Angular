@@ -1,8 +1,10 @@
-<!--Ver um bom exemplo de style para mudar tema da página-->
-
-<!--<div class="container" [ngStyle]="escolheTema()">
-    <h1>Exemplo de Style</h1>
-    <h2>Mudança de temas</h2>
-    <button (click)="mudaTema()">Altere o tema</button>
-    <p> {{currentTheme}}</p>
-</div>-->
+<body [ngStyle]="{ 'background-color': isDarkMode ? '#292c35' : '#fafafa' }">
+    <div>
+        <input type="checkbox" class="checkbox" id="chk" (change)="toggleDarkMode($event)" />
+        <label class="label" for="chk">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+            <div class="ball" [class.dark]="isDarkMode"></div>
+        </label>
+    </div>
+</body>
