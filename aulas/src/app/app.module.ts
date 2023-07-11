@@ -17,6 +17,8 @@ import { ExemploPipesComponent } from './exemplo-pipes/exemplo-pipes.component';
 import { MicroondasComponent } from './microondas/microondas.component';
 import { TimeFormatPipe } from './time-format.pipe';
 import { MdPaiFilhoModule } from './md-pai-filho/md-pai-filho.module';
+import { MdFilhoPaiModule } from './md-filho-pai/md-filho-pai.module';
+import { MdServiceModule } from './md-service/md-service.module';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,9 @@ import { MdPaiFilhoModule } from './md-pai-filho/md-pai-filho.module';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    MdPaiFilhoModule
+    MdPaiFilhoModule,
+    MdFilhoPaiModule,
+    MdServiceModule
   ],
   providers: [],
   bootstrap: [AppComponent]

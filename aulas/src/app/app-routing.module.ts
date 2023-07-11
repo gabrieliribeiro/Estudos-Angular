@@ -11,6 +11,8 @@ import { ExemploSwitchComponent } from './exemplo-switch/exemplo-switch.componen
 import { ExemploPipesComponent } from './exemplo-pipes/exemplo-pipes.component';
 import { MicroondasComponent } from './microondas/microondas.component';
 import { CpPaiComponent } from './md-pai-filho/cp-pai/cp-pai.component';
+import { CpPaiComponent as CpPaiComponent2} from './md-filho-pai/cp-pai/cp-pai.component';
+import { CpAgruparComponent } from './md-service/cp-agrupar/cp-agrupar.component';
 
 const routes: Routes = [
   {path: "exemplo-binding", component: ExemploBindingComponent},
@@ -23,7 +25,9 @@ const routes: Routes = [
   {path: "exemplo-switch", component: ExemploSwitchComponent},
   {path: "exemplo-pipes", component: ExemploPipesComponent},
   {path: "microondas", component:MicroondasComponent},
-  {path: "pai-filho", component: CpPaiComponent}
+  {path: "pai-filho", component: CpPaiComponent},
+  {path: "filho-pai", component: CpPaiComponent2},
+  {path: "service", component: CpAgruparComponent}
 ];
 
 @NgModule({
