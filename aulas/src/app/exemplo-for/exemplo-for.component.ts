@@ -1,10 +1,4 @@
-import { Component } from '@angular/core';
-
-interface Pessoa {
-  nome: string;
-  funcao: string;
-  fotoUrl: string;
-}
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-exemplo-for',
@@ -12,44 +6,31 @@ interface Pessoa {
   styleUrls: ['./exemplo-for.component.scss']
 })
 export class ExemploForComponent {
-  nomeTime: string = '';
-  corTime: string = '';
-  nomePessoa: string = '';
-  funcaoPessoa: string = '';
-  fotoPessoa: File | null = null;
-  pessoas: Pessoa[] = [];
+  nome: string = '';
+  cargo: string = '';
+  time: string = '';
+  imagemNome: string ='';
+  imagemURL: string = '';
+  cardCriado: boolean = false;
 
-  cadastrarTime() {
-    // Lógica para cadastrar o time no servidor ou armazenar localmente
-    console.log('Time cadastrado:', this.nomeTime, this.corTime);
+  itens: string[] = ['DevOps', 'Front-End', 'Back-End', 'FullStack'];
+
+  handleFileInput(event: any) {
+    const file = event.target.files[0];
+    this.imagemNome = file ? file.name : '';
+    this.createImageURL(file);
   }
 
-  cadastrarPessoa() {
-    if (this.fotoPessoa) {
-      // Lógica para fazer upload da foto da pessoa e obter a URL
-      const fotoUrl = 'https://example.com/foto-pessoa.jpg';
-
-      const pessoa: Pessoa = {
-        nome: this.nomePessoa,
-        funcao: this.funcaoPessoa,
-        fotoUrl: fotoUrl
-      };
-
-      this.pessoas.push(pessoa);
-
-      // Limpar os campos do formulário
-      this.nomePessoa = '';
-      this.funcaoPessoa = '';
-      this.fotoPessoa = null;
-
-      console.log('Pessoa cadastrada:', pessoa);
-    }
+  createImageURL(file: File) {
+    const reader = new FileReader();
+    reader.onload = (event: any) => {
+      this.imagemURL = event.target.result;
+    };
+    reader.readAsDataURL(file);
   }
 
-  handleFotoUpload(event: Event) {
-    const inputElement = event.target as HTMLInputElement;
-    if (inputElement.files && inputElement.files.length > 0) {
-      this.fotoPessoa = inputElement.files[0];
-    }
+  criarCard() {
+    this.cardCriado = true;
   }
+
 }

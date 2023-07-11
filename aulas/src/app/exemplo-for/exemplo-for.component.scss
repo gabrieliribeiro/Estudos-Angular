@@ -1,95 +1,208 @@
-.container {
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;600&display=swap");
+
+.form-container {
+  margin: auto;
+  margin-top: 80px;
+  width: 1121px;
+  height: 850px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: #f6f6f6;
+  box-shadow: 7px 7px 15px 0px rgba(0, 0, 0, 0.08);
+
+  h2 {
+    width: 806px;
+    height: 43px;
+    color: #212121;
+    font-family: Prata;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+    padding-top: 33px;
+    margin-left: 96px;
+  }
+}
+
+.componente {
+  margin-top: 44px;
+
+  label {
+    display: flex;
+    width: 109px;
+    margin-top: 29px;
+    margin-bottom: 8px;
+    margin-left: 96px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #212121;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  input {
+    background-color: #fff;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
+    width: 930px;
+    height: 80px;
+    border: none;
+    border: none;
+    font-size: 24px;
+    padding: 24px;
+    margin-left: 96px;
+    box-sizing: border-box;
+  }
+
+  input[type="file"] {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
+    justify-content: center;
+    color: #a4a4a4;
+    font-family: "Montserrat", sans-serif;
+    text-align: middle;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
   }
-  
-  .form {
-    width: 400px;
-    margin-bottom: 20px;
+
+  input[type="text"]::placeholder {
+    display: flex;
+    width: 328px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #a4a4a4;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
   }
-  
-  .form-group {
-    margin-bottom: 10px;
-  }
-  
+}
+
+.lista-suspensa {
   label {
-    display: block;
+    display: flex;
+    width: 109px;
+    margin-top: 29px;
+    margin-bottom: 8px;
+    margin-left: 96px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #212121;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
   }
-  
-  button {
-    display: block;
-    padding: 10px;
-    background-color: #007bff;
-    color: white;
+
+  select {
+    background-color: #fff;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
+    width: 930px;
+    height: 80px;
+    margin-bottom: 8px;
+    margin-left: 96px;
     border: none;
-    cursor: pointer;
+    font-size: 24px;
+    padding: 24px;
+    box-sizing: border-box;
   }
-  
-  .time {
-    width: 400px;
-  }
-  
-  .time-card {
-    display: flex;
-    align-items: center;
-    background-color: #f2f2f2;
-    padding: 10px;
-    margin-bottom: 10px;
-  }
-  
-  .time-info {
-    display: flex;
-    align-items: center;
-  }
-  
-  .time-color {
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
-  }
-  
-  .time-name {
-    font-weight: bold;
-  }
-  
-  .pessoas {
-    margin-top: 20px;
-  }
-  
-  .pessoa-card {
-    display: flex;
-    align-items: center;
-    background-color: #f2f2f2;
-    padding: 10px;
-    margin-bottom: 10px;
-  }
-  
-  .pessoa-info {
-    display: flex;
-    align-items: center;
-  }
-  
-  .pessoa-color {
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
-  }
-  
-  .pessoa-name {
-    font-weight: bold;
-    margin-right: 10px;
-  }
-  
-  .pessoa-funcao {
-    color: #666666;
-    margin-right: 10px;
-  }
-  
-  .pessoa-foto img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-  }
-  
+}
+
+.criarCard {
+  width: 167px;
+  height: 80px;
+  flex-shrink: 0;
+  background-color: #6278f7;
+  border-radius: 10px;
+  padding: 32px;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  margin-left: 96px;
+  margin-top: 40px;
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+
+  font-family: "Montserrat", sans-serif;
+
+  text-align: center;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.criarCard:hover {
+  color: #95ffd4;
+}
+
+
+.time{
+  text-align: center;
+  padding: 32px;
+
+}
+
+.time h3{
+  font-size: 32px;
+  border-bottom: 4px solid;
+  display: inline-block;
+  padding-bottom: 8px;
+}
+
+.time .colaboradores{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 32px;
+  flex-wrap: wrap;
+}
+
+.colaborador {
+  width: 280px;
+}
+
+.colaborador .cabecalho {
+  background-color:  #F0F0F0;
+  border-radius: 10px 10px 0px 0px;
+}
+.colaborador img {
+  width: 100px;
+  border-radius: 50%;
+  position: relative;
+  bottom: -50px;
+}
+
+.colaborador .rodape {
+  background: #FFFFFF;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.08);
+  border-radius: 0px 0px 10px 10px;
+  padding-top: 90px;
+  padding-bottom: 40px;
+}
+
+.colaborador .rodape h4 {
+  color: #6278F7;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.colaborador .rodape h5 {
+  font-size: 18px;
+  line-height: 22px;
+  color: #212121;
+  padding: 0 16px;
+}

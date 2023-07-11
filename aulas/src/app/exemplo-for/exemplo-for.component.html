@@ -1,62 +1,41 @@
-<div class="container">
-    <h2>Cadastro de Time</h2>
-  
-    <div class="form">
-      <h3>Cadastrar Time</h3>
-      <form (ngSubmit)="cadastrarTime()" #timeForm="ngForm">
-        <div class="form-group">
-          <label for="timeNome">Nome do Time:</label>
-          <input type="text" id="timeNome" name="timeNome" [(ngModel)]="nomeTime" required>
-        </div>
-        <div class="form-group">
-          <label for="timeCor">Cor do Time:</label>
-          <input type="color" id="timeCor" name="timeCor" [(ngModel)]="corTime" required>
-        </div>
-        <button type="submit">Cadastrar</button>
-      </form>
-    </div>
-  
-    <div class="form">
-      <h3>Cadastrar Pessoa</h3>
-      <form (ngSubmit)="cadastrarPessoa()" #pessoaForm="ngForm">
-        <div class="form-group">
-          <label for="pessoaNome">Nome da Pessoa:</label>
-          <input type="text" id="pessoaNome" name="pessoaNome" [(ngModel)]="nomePessoa" required>
-        </div>
-        <div class="form-group">
-          <label for="pessoaFuncao">Função:</label>
-          <input type="text" id="pessoaFuncao" name="pessoaFuncao" [(ngModel)]="funcaoPessoa" required>
-        </div>
-        <div class="form-group">
-          <label for="pessoaFoto">Foto:</label>
-          <input type="file" id="pessoaFoto" name="pessoaFoto" (change)="handleFotoUpload($event)" required>
-        </div>
-        <button type="submit">Cadastrar</button>
-      </form>
-    </div>
-  
-    <div class="time">
-      <h3>Time Cadastrado</h3>
-      <div class="time-card">
-        <div class="time-info">
-          <div class="time-color" [style.background]="corTime"></div>
-          <div class="time-name">{{ nomeTime }}</div>
-        </div>
+<div class="form-container">
+  <h2>Preencha os dados para criar o card do colaborador!</h2>
+  <div class="componente">
+    <label for="nome">Nome</label>
+    <input type="text" name="nome" id="nome" placeholder="Digite seu nome" [(ngModel)]="nome">
+  </div>
+  <div class="componente">
+    <label for="cargo">Cargo</label>
+    <input type="text" name="cargo" id="cargo" placeholder="Digite seu cargo" [(ngModel)]="cargo">
+  </div>
+  <div class="componente">
+    <label for="imagem">Imagem</label>
+    <input type="file" id="imagem" name="imagem" (change)="handleFileInput($event)">
+  </div>
+  <div class="lista-suspensa">
+    <label for="time">Time</label>
+    <select id="time" [(ngModel)]="time" required>
+      <option *ngFor="let item of itens" [value]="item">{{ item }}</option>
+    </select>
+  </div>
+  <div class="botao">
+    <button class="criarCard" (click)="criarCard()">Criar card</button>
+  </div>
+</div>
+
+<div class="time">
+  <h3>time</h3>
+  <div class="colaborador" *ngIf="cardCriado">
+    <div class="cabecalho">
+      <div *ngIf="imagemNome">
+        <img [src]="imagemURL" alt="Imagem do colaborador">
       </div>
-      <div class="pessoas">
-        <h4>Pessoas do Time</h4>
-        <div class="pessoa-card" *ngFor="let pessoa of pessoas">
-          <div class="pessoa-info">
-            <div class="pessoa-color" [style.background]="corTime"></div>
-            <div class="pessoa-name">{{ pessoa.nome }}</div>
-            <div class="pessoa-funcao">{{ pessoa.funcao }}</div>
-          </div>
-          <div class="pessoa-foto">
-            <img [src]="pessoa.fotoUrl" alt="Foto de {{ pessoa.nome }}">
-          </div>
-        </div>
+      <div class="rodape">
+        <h4><strong>Nome:</strong> {{ nome }}</h4>
+        <h5><strong>Cargo:</strong> {{ cargo }}</h5>
       </div>
     </div>
   </div>
-  
+</div>
+    
 
