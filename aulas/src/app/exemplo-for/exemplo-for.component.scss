@@ -148,6 +148,11 @@
   color: #95ffd4;
 }
 
+.criarCard[disabled] {
+  background-color: #CCCCCC;
+  cursor: not-allowed;
+}
+
 .time {
   width: 1440px;
   height: 438px;

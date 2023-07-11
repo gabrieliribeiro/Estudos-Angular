@@ -14,15 +14,21 @@ interface Colaborador {
   styleUrls: ['./exemplo-for.component.scss']
 })
 export class ExemploForComponent {
-  colaboradores: Colaborador[] = [];
+  colaboradores: Colaborador[][] = [];
   nome: string = '';
   cargo: string = '';
   time: string = '';
   imagemNome: string ='';
   imagemURL: string = '';
-  cardCriado: boolean = false;
 
   itens: string[] = ['DevOps', 'Front-End', 'Back-End', 'FullStack'];
+
+  getTimeNome(time: string | undefined): string {
+    if (time) {
+      return this.itens.includes(time) ? time : '';
+    }
+    return '';
+  }
 
   handleFileInput(event: any) {
     const file = event.target.files[0];
@@ -39,6 +45,7 @@ export class ExemploForComponent {
   }
 
   criarCard() {
+    if (this.nome && this.cargo && this.time && this.imagemNome && this.imagemURL) {
     const novoColaborador: Colaborador = {
       nome: this.nome,
       cargo: this.cargo,
@@ -46,14 +53,21 @@ export class ExemploForComponent {
       imagemNome: this.imagemNome,
       imagemURL: this.imagemURL
     };
-
-    this.colaboradores.push(novoColaborador);
+    
+    const timeExistente = this.colaboradores.find(colaboradores => colaboradores[0].time === this.time);
+    
+    if (timeExistente) {
+      timeExistente.push(novoColaborador);
+    }else {
+      const novoTime: Colaborador[] = [novoColaborador];
+      this.colaboradores.push(novoTime);
+    }
 
     this.nome = '';
     this.cargo = '';
     this.time = '';
     this.imagemNome = '';
     this.imagemURL = '';
+   }
   }
-
 }

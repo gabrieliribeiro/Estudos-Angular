@@ -19,14 +19,14 @@
     </select>
   </div>
   <div class="botao">
-    <button class="criarCard" (click)="criarCard()">Criar card</button>
+    <button class="criarCard" [disabled]="!nome || !cargo || !time || !imagemNome || !imagemURL" (click)="criarCard()">Criar card</button>
   </div>
 </div>
 
-<div class="time">
-  <h3>time</h3>
+<div class="time" *ngFor="let timeColaboradores of colaboradores">
+  <h3>{{ getTimeNome(timeColaboradores[0]?.time) }}</h3>
   <div class="colaboradores-container">
-    <div class="colaborador" *ngFor="let colaborador of colaboradores">
+    <div class="colaborador" *ngFor="let colaborador of timeColaboradores">
       <div class="cabecalho">
         <div *ngIf="colaborador.imagemNome">
           <img [src]="colaborador.imagemURL" alt="Imagem do colaborador">
