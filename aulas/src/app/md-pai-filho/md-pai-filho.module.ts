@@ -14,6 +14,9 @@ import { CpFilhoComponent } from './cp-filho/cp-filho.component';
   imports: [
     CommonModule,
     FormsModule
+  ],
+  exports:[
+    CpPaiComponent
   ]
 })
 export class MdPaiFilhoModule { }

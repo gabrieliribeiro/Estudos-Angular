@@ -16,6 +16,7 @@ import { ExemploSwitchComponent } from './exemplo-switch/exemplo-switch.componen
 import { ExemploPipesComponent } from './exemplo-pipes/exemplo-pipes.component';
 import { MicroondasComponent } from './microondas/microondas.component';
 import { TimeFormatPipe } from './time-format.pipe';
+import { MdPaiFilhoModule } from './md-pai-filho/md-pai-filho.module';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { TimeFormatPipe } from './time-format.pipe';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    MdPaiFilhoModule
   ],
   providers: [],
   bootstrap: [AppComponent]

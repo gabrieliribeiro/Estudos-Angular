@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class CpPaiComponent {
 
+  public carro = {
+    marca: '',
+    ano: 0,
+    cor: ''
+  }
 }

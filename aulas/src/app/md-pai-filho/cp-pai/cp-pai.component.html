@@ -1,1 +1,15 @@
-<p>cp-pai works!</p>
+<h2>Componente Pai</h2>
+<div>
+    <p>Marca</p>
+    <input [(ngModel)]="carro.marca">
+</div>
+<div>
+    <p>Ano</p>
+    <input [(ngModel)]="carro.ano" type="number">
+</div>
+<div>
+    <p>Cor</p>
+    <input [(ngModel)]="carro.cor">
+</div>
+
+<app-cp-filho [carroFilho]="carro"></app-cp-filho>
