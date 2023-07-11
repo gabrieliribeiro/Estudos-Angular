@@ -25,7 +25,7 @@
 
 <div class="time" *ngFor="let timeColaboradores of colaboradores">
   <h3>{{ getTimeNome(timeColaboradores[0]?.time) }}</h3>
-  <div class="colaboradores-container">
+  <div class="colaborador-container">
     <div class="colaborador" *ngFor="let colaborador of timeColaboradores">
       <div class="cabecalho">
         <div *ngIf="colaborador.imagemNome">

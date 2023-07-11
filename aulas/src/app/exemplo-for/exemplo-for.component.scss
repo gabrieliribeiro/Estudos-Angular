@@ -154,6 +154,7 @@
 }
 
 .time {
+  margin: auto;
   width: 1440px;
   height: 438px;
   flex-shrink: 0;
@@ -181,13 +182,24 @@
   flex-wrap: wrap;
 }
 
+.colaborador-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
+.colaborador:last-child {
+  margin-right: 0;
+}
+
 .colaborador {
   width: 280px;
   flex-shrink: 0;
-
+  margin-right: 10px;
+  margin: 10px;
   border-radius: 10px;
   background: #fff;
-  /* Drop Cards */
   box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.08);
 }
 
