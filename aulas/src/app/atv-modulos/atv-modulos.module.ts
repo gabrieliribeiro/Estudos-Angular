@@ -14,6 +14,9 @@ import { CpTelaComponent } from './cp-tela/cp-tela.component';
   ],
   imports: [
     CommonModule
+  ],
+  exports:[
+    CpTelaComponent
   ]
 })
 export class AtvModulosModule { }

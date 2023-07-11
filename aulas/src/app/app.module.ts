@@ -19,6 +19,7 @@ import { TimeFormatPipe } from './time-format.pipe';
 import { MdPaiFilhoModule } from './md-pai-filho/md-pai-filho.module';
 import { MdFilhoPaiModule } from './md-filho-pai/md-filho-pai.module';
 import { MdServiceModule } from './md-service/md-service.module';
+import { AtvModulosModule } from './atv-modulos/atv-modulos.module';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { MdServiceModule } from './md-service/md-service.module';
     FormsModule,
     MdPaiFilhoModule,
     MdFilhoPaiModule,
-    MdServiceModule
+    MdServiceModule,
+    AtvModulosModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -13,6 +13,7 @@ import { MicroondasComponent } from './microondas/microondas.component';
 import { CpPaiComponent } from './md-pai-filho/cp-pai/cp-pai.component';
 import { CpPaiComponent as CpPaiComponent2} from './md-filho-pai/cp-pai/cp-pai.component';
 import { CpAgruparComponent } from './md-service/cp-agrupar/cp-agrupar.component';
+import { CpTelaComponent } from './atv-modulos/cp-tela/cp-tela.component';
 
 const routes: Routes = [
   {path: "exemplo-binding", component: ExemploBindingComponent},
@@ -27,7 +28,8 @@ const routes: Routes = [
   {path: "microondas", component:MicroondasComponent},
   {path: "pai-filho", component: CpPaiComponent},
   {path: "filho-pai", component: CpPaiComponent2},
-  {path: "service", component: CpAgruparComponent}
+  {path: "service", component: CpAgruparComponent},
+  {path: "formulario", component: CpTelaComponent}
 ];
 
 @NgModule({

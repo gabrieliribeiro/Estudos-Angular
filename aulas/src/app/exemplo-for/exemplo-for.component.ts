@@ -68,6 +68,6 @@ export class ExemploForComponent {
     this.time = '';
     this.imagemNome = '';
     this.imagemURL = '';
-   }
+    }
   }
 }

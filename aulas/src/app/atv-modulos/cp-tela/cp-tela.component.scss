@@ -1,0 +1,24 @@
+.tela-container {
+    margin: auto;
+    margin-top: 50px;
+    flex-shrink: 0;
+
+    h2 {
+        height: 43px;
+        color: #212121;
+        font-size: 50px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-align: center;
+        margin-left: 96px;
+    }
+    p{
+        height: 43px;
+        font-size: 24px;
+        color: #212121;
+        text-align: center;
+        padding-top: 16px;
+        margin-left: 96px;
+    }
+}

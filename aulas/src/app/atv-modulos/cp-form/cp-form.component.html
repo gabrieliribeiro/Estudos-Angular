@@ -1,1 +1,16 @@
-<p>cp-form works!</p>
+<div class="form-container">
+    <h2>Formulário para cadastro de medicamentos!</h2>
+    <div class="componente">
+        <label for="nome">Nome</label>
+        <input type="text" #inputProps name="nome" id="nome" placeholder="Digite o nome do medicamento" >
+    </div>
+    <div class="componente">
+        <label for="cargo">Valor</label>
+        <input type="number" step=".01" name="valor" id="valor" placeholder="Digite seu valor">
+    </div>
+    <div class="botao">
+        <button class="cadastro" (click)="addItem(inputProps.value)">Cadastrar</button>
+    </div>
+</div>
+
+

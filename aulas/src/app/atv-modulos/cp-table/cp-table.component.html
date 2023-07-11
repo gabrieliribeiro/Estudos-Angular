@@ -1,1 +1,17 @@
-<p>cp-table works!</p>
+<div class="lista-container">
+    <h2>Lista de medicações</h2>
+    <table>
+        <tr>
+            <th>Nome medicamento</th>
+            <th>Valor</th>
+            <th>Selecionado</th>
+        </tr>
+        <tbody>
+            <tr *ngFor="let item of lista">
+                <td>{{item}}</td>
+            </tr>
+        </tbody>  
+    </table>
+</div>
+
+
