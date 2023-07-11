@@ -1,11 +1,20 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
+interface Colaborador {
+  nome: string;
+  cargo: string;
+  time: string;
+  imagemNome: string;
+  imagemURL: string;
+}
+
 @Component({
   selector: 'app-exemplo-for',
   templateUrl: './exemplo-for.component.html',
   styleUrls: ['./exemplo-for.component.scss']
 })
 export class ExemploForComponent {
+  colaboradores: Colaborador[] = [];
   nome: string = '';
   cargo: string = '';
   time: string = '';
@@ -30,7 +39,21 @@ export class ExemploForComponent {
   }
 
   criarCard() {
-    this.cardCriado = true;
+    const novoColaborador: Colaborador = {
+      nome: this.nome,
+      cargo: this.cargo,
+      time: this.time,
+      imagemNome: this.imagemNome,
+      imagemURL: this.imagemURL
+    };
+
+    this.colaboradores.push(novoColaborador);
+
+    this.nome = '';
+    this.cargo = '';
+    this.time = '';
+    this.imagemNome = '';
+    this.imagemURL = '';
   }
 
 }

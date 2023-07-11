@@ -148,21 +148,28 @@
   color: #95ffd4;
 }
 
-
-.time{
+.time {
+  width: 1440px;
+  height: 438px;
+  flex-shrink: 0;
   text-align: center;
   padding: 32px;
 
+  h3 {
+    color: #212121;
+    text-align: center;
+    font-family: Prata;
+    font-size: 32px;
+    border-bottom: 4px solid;
+    display: inline-block;
+    padding-bottom: 8px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
 }
 
-.time h3{
-  font-size: 32px;
-  border-bottom: 4px solid;
-  display: inline-block;
-  padding-bottom: 8px;
-}
-
-.time .colaboradores{
+.time .colaboradores {
   display: flex;
   justify-content: space-around;
   margin-top: 32px;
@@ -171,33 +178,47 @@
 
 .colaborador {
   width: 280px;
+  flex-shrink: 0;
+
+  border-radius: 10px;
+  background: #fff;
+  /* Drop Cards */
+  box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.08);
 }
 
 .colaborador .cabecalho {
-  background-color:  #F0F0F0;
+  
+  background-color: #f0f0f0;
   border-radius: 10px 10px 0px 0px;
 }
+
 .colaborador img {
-  width: 100px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   position: relative;
   bottom: -50px;
 }
 
 .colaborador .rodape {
-  background: #FFFFFF;
+  background: #ffffff;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.08);
   border-radius: 0px 0px 10px 10px;
-  padding-top: 90px;
+  padding-top: 60px;
   padding-bottom: 40px;
 }
 
 .colaborador .rodape h4 {
-  color: #6278F7;
+  color: #6278f7;
   font-size: 18px;
   line-height: 22px;
   font-weight: bold;
   margin-bottom: 8px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
 }
 
 .colaborador .rodape h5 {
@@ -205,4 +226,10 @@
   line-height: 22px;
   color: #212121;
   padding: 0 16px;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }

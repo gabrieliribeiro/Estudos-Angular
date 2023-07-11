@@ -25,17 +25,16 @@
 
 <div class="time">
   <h3>time</h3>
-  <div class="colaborador" *ngIf="cardCriado">
-    <div class="cabecalho">
-      <div *ngIf="imagemNome">
-        <img [src]="imagemURL" alt="Imagem do colaborador">
+  <div class="colaboradores-container">
+    <div class="colaborador" *ngFor="let colaborador of colaboradores">
+      <div class="cabecalho">
+        <div *ngIf="colaborador.imagemNome">
+          <img [src]="colaborador.imagemURL" alt="Imagem do colaborador">
+        </div>
+        <div class="rodape">
+          <h4>{{ colaborador.nome }}</h4>
+          <h5>{{ colaborador.cargo }}</h5>
+        </div>
       </div>
-      <div class="rodape">
-        <h4><strong>Nome:</strong> {{ nome }}</h4>
-        <h5><strong>Cargo:</strong> {{ cargo }}</h5>
-      </div>
-    </div>
   </div>
 </div>
-    
-
