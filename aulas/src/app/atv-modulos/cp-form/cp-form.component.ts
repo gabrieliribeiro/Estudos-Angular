@@ -1,30 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ServiceService } from '../services/service.service';
+import { Medicamento } from '../models/medicamento.model';
 
 @Component({
   selector: 'app-cp-form',
   templateUrl: './cp-form.component.html',
   styleUrls: ['./cp-form.component.scss']
 })
-export class CpFormComponent implements OnInit{
-  public qt:number = 0;
+export class CpFormComponent{
+  public medicamento: Medicamento = new Medicamento('', 0);
 
-  public medicamento = {
-    nome: '',
-    valor: 0
-  }
+  constructor(private service: ServiceService) {}
 
-  //Injeção de depedência do service
-  constructor(private service: ServiceService){}
-
-  public addItem(valor:string){
-    return this.service.adiciona(valor);
-  }
-
-  ngOnInit(): void {
-      this.service.emitEvent.subscribe({
-        next:(res:number) => this.qt = res,
-        error: (err:number) => this.qt = 0,
-      });
+  public adicionarMedicamento(): void {
+    this.service.adiciona(this.medicamento);
+    this.medicamento = new Medicamento('', 0);
   }
 }

@@ -1,4 +1,4 @@
-import { EventEmitter, Injectable } from '@angular/core';
+import { EventEmitter, Injectable, Output } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
@@ -6,17 +6,25 @@ import { EventEmitter, Injectable } from '@angular/core';
 export class ServiceService {
   public emitEvent = new EventEmitter();
 
-  private lista: Array<string> = [];
+  private lista: Array<any> = [];
+  private medicamentoSelecionado: any = null;
 
-  public getLista(){
+  public getLista(): Array<any> {
     return this.lista;
   }
 
-  public adiciona(valor:string){
-    this.lista.push(valor);
+  public adiciona(medicamento: any): void {
+    this.lista.push(medicamento);
     this.emitEvent.emit(this.lista.length);
-    return this.lista;
   }
 
-  constructor(){}
+  public setMedicamentoSelecionado(medicamento: any): void {
+    this.medicamentoSelecionado = { ...medicamento };
+  }
+
+  public getMedicamentoSelecionado(): any {
+    return this.medicamentoSelecionado;
+  }
+
+  constructor() {}
 }

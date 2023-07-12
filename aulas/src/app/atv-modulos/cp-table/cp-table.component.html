@@ -4,14 +4,16 @@
         <tr>
             <th>Nome medicamento</th>
             <th>Valor</th>
-            <th>Selecionado</th>
+            <th>Ações</th>
         </tr>
         <tbody>
             <tr *ngFor="let item of lista">
-                <td>{{item}}</td>
+                <td>{{ item.nome }}</td>
+                <td>{{ item.valor }}</td>
+                <td>
+                    <button class="" (click)="carregarMedicamento(item)">Carregar</button>
+                </td>
             </tr>
-        </tbody>  
+        </tbody>
     </table>
 </div>
-
-
