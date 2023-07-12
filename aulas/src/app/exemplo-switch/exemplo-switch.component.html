@@ -1,4 +1,16 @@
-<!--Arrumar um bom exemplo de switch-->
+<div class="container">
+    <h2>Selecione o animal seu animal favorito!</h2>
+  <select [(ngModel)]="selectedAnimal" (change)="animalSelected()">
+    <option value="dog">Cachorro</option>
+    <option value="cat">Gato</option>
+    <option value="bird">Pássaro</option>
+  </select>
 
+  <div [ngSwitch]="selectedAnimal">
+    <img *ngSwitchCase="'dog'" [src]="retornaImagem('dog')" alt="Dog">
+    <img *ngSwitchCase="'cat'" [src]="retornaImagem('cat')" alt="Cat">
+    <img *ngSwitchCase="'bird'" [src]="retornaImagem('bird')" alt="Bird">
+    <div *ngSwitchDefault>Nenhum animal selecionado.</div>
+  </div>
+</div>
 
-<p>exemplo-switch works!</p>
