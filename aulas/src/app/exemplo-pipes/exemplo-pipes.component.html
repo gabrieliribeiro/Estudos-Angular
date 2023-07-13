@@ -1,1 +1,7 @@
-<p>exemplo-pipes works!</p>
+<div class="container">
+    <h1>Exemplo de Filtro com Pipe</h1>
+    <input type="text" [(ngModel)]="searchTerm" placeholder="Digite um termo de pesquisa">
+    <ul>
+        <li *ngFor="let item of items | filter: searchTerm">{{ item }}</li>
+    </ul>
+</div>

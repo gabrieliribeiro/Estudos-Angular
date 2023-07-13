@@ -19,7 +19,7 @@ export class ServiceService {
   }
 
   public setMedicamentoSelecionado(medicamento: any): void {
-    this.medicamentoSelecionado = { ...medicamento };
+    this.medicamentoSelecionado = medicamento;
   }
 
   public getMedicamentoSelecionado(): any {
