@@ -1,0 +1,6 @@
+<div class="form-container">
+    <label for="cep">CEP:</label>
+    <input type="text" name="cep" id="cep" placeholder="Informe seu CEP" [(ngModel)]="cep">
+    <button (click)="buscaEndereco()">Buscar</button>
+</div>
+<app-tabela [endereco]="endereco"></app-tabela>

@@ -7,7 +7,7 @@
         [(ngModel)]="item.name"
         [ngClass]="{ checked: item.checked }"
         (keyup)="validationInput(item.name, i)"
-      />
+      /> 
       <button (click)="deleteItem(i)">
         <img
           class="icone"
@@ -24,5 +24,5 @@
 ></app-input-add-itens>
 <app-button-delete-all
   (click)="deleteAll()"
-  *ngIf="taskList.length"
+  *ngIf="taskList.length" 
 ></app-button-delete-all>

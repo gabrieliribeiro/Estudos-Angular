@@ -10,7 +10,7 @@ import { first, last } from 'rxjs';
 export class TodoListComponent implements DoCheck {
   ngDoCheck(): void {
     this.setLocalStorage();
-  }
+  } 
 
   public taskList: Array<Task> = JSON.parse(
     localStorage.getItem('tarefas') || '[]'
