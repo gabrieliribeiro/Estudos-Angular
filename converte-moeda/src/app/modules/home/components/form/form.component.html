@@ -1,1 +1,18 @@
-<p>form works!</p>
+<div class="form-container">
+  <label for="real">Valor R$:</label>
+  <input
+    type="text"
+    name="real"
+    id="real"
+    placeholder="Informe o valor em R$ para conversão"
+    [(ngModel)]="valor"
+    (input)="buscaValor()"
+  />
+</div>
+<div class="result-container">
+    <ul>
+        <li>Valor US$ (Dólar):{{valorDolar }}</li>
+        <li>Valor € (Euro): {{valorEuro }}</li>
+        <li>Valor $ (Peso Argentino): {{valorPesoArgentino }}</li>
+    </ul>
+</div>
