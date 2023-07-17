@@ -1,16 +1,16 @@
 <div class="form-container">
     <h2>Formulário para cadastro de medicamentos!</h2>
     <div class="componente">
-        <label for="nome">Nome</label>
-        <input type="text" [(ngModel)]="medicamento.nome" name="nome" id="nome"
+        <label for="nome">Nome do remédio</label>
+        <input type="text" [(ngModel)]="medicamento.nome" #inputNome name="nome" id="nome"
             placeholder="Digite o nome do medicamento">
     </div>
     <div class="componente">
         <label for="valor">Valor</label>
-        <input type="number" step=".01" [(ngModel)]="medicamento.valor" name="valor" id="valor"
+        <input type="string" [(ngModel)]="medicamento.valor" #inputValor name="valor" id="valor"
             placeholder="Digite o valor">
     </div>
     <div class="botao">
-        <button class="cadastro" (click)="adicionarMedicamento()">Cadastrar</button>
+        <button class="cadastro" (click)="adicionarMedicamento(inputNome.value, inputValor.value)">Cadastrar</button>
     </div>
 </div>

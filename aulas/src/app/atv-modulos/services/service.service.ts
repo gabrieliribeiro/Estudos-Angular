@@ -1,29 +1,30 @@
 import { EventEmitter, Injectable, Output } from '@angular/core';
+import { Medicamento } from '../models/medicamento.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ServiceService {
   public emitEvent = new EventEmitter();
+  public emitMedicamentoEvent = new EventEmitter();
 
-  private lista: Array<any> = [];
-  private medicamentoSelecionado: any = null;
+  public remedio: Medicamento = {nome: '', valor: ''};
 
-  public getLista(): Array<any> {
+  private lista: Medicamento[] = [];
+
+  public getLista() {
     return this.lista;
   }
 
-  public adiciona(medicamento: any): void {
-    this.lista.push(medicamento);
-    this.emitEvent.emit(this.lista.length);
+  public getMedicamento(event: number) {
+    this.remedio = this.lista[event]
+    this.emitMedicamentoEvent.emit(this.remedio);
   }
 
-  public setMedicamentoSelecionado(medicamento: any): void {
-    this.medicamentoSelecionado = medicamento;
-  }
-
-  public getMedicamentoSelecionado(): any {
-    return this.medicamentoSelecionado;
+  public adiciona(nome: string, valor: string) {
+    const remedio = { nome: nome, valor: valor };
+    this.lista.push(remedio);
+    this.emitEvent.emit(this.lista);
   }
 
   constructor() {}

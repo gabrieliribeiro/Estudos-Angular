@@ -7,13 +7,14 @@
             <th>Ações</th>
         </tr>
         <tbody>
-            <tr *ngFor="let item of lista">
+            <tr *ngFor="let item of lista ; let i = index">
                 <td>{{ item.nome }}</td>
                 <td>{{ item.valor }}</td>
                 <td>
-                    <button class="" (click)="setMedicamentoSelecionado(item)">Carregar</button>
+                    <button class="" (click)="selecionaMedicamento(i)">Carregar</button>
                 </td>
             </tr>
         </tbody>
     </table>
 </div>
+

@@ -8,7 +8,10 @@ import { Medicamento } from '../models/medicamento.model';
   styleUrls: ['./cp-table.component.scss'],
 })
 export class CpTableComponent implements OnInit {
-  public lista: Array<Medicamento> = [];
+
+  @Output() medicamentoSelecionado = new EventEmitter<Medicamento>(); // Evento de saída para notificar o componente pai
+
+  public lista: Medicamento[] = [];
 
   constructor(private service: ServiceService) {}
 
@@ -16,7 +19,7 @@ export class CpTableComponent implements OnInit {
     this.lista = this.service.getLista();
   }
 
-   public setMedicamentoSelecionado(medicamento: any) {
-    this.service.setMedicamentoSelecionado(medicamento);
+  public selecionaMedicamento(event: number) {
+    this.service.getMedicamento(event);
   }
 }
