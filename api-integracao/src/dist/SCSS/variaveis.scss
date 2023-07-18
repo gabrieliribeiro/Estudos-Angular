@@ -1,18 +1,17 @@
-$primary-color:#F28705;
-$secundary-color:#F27405;
-$terciary-color:#D9C3B0;
-$fourth-color:#592202;
-$fifth-color:#D9895B;
-$font-color:#FFFFFF;
+$primary-color:#F2F2F2;
+$secundary-color:#A6A6A6;
+$terciary-color:#595959;
+$fourth-color:#0e0e0e;
+$fifth-color:#3a3939;
 
-$primary-background-color:$primary-color;
-$secondary-background-color:$secundary-color;
+$primary-background-color: $fifth-color;
+$secondary-background-color:$fourth-color;
 
-$primary-text-color:$font-color;
-$secondary-text-color:$fourth-color;
+$primary-text-color: $primary-color;
+$secondary-text-color:$secundary-color;
 $terciary-text-color: $terciary-color;
 
 $save-color:#2F5755;
-$delete-color: #E5243F;
-$edit-color:#F2B705;
-$serch-color:#54C6BE;
+$delete-color: #730202;
+$edit-color:#d4a107;
+$serch-color:#dd7b04;

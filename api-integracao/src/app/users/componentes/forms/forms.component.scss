@@ -1,25 +1,28 @@
 @import "../../../../dist/SCSS/variaveis.scss";
+
+
 .form-container {
   margin: auto;
-  margin-top: 80px;
-  width: 850px;
+  margin-top: 50px;
+  width: 1050px;
   height: 450px;
   flex-shrink: 0;
   border-radius: 20px;
-  box-shadow: 7px 7px 15px 0px rgba(0, 0, 0, 0.342);
+  background: $primary-color;
+  box-shadow: 7px 7px 15px 0px rgba(148, 148, 148, 0.459);
 
   h2 {
     width: 806px;
     height: 43px;
-    color: #212121;
-    font-family: Prata;
+    color: $fourth-color;
+    font-family: 'Quicksand', sans-serif;
     font-size: 32px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     text-align: center;
     padding-top: 33px;
-    margin-left: 2%;
+    margin-left: 13%;
   }
 }
 

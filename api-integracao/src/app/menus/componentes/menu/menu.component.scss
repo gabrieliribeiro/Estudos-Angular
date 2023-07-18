@@ -1,23 +1,32 @@
+@import "../../../../dist/SCSS/variaveis.scss";
+@font-face {
+    font-family: 'Speed';
+    src: url('../../../../assets/fontes/Race\ Sport.ttf') format('opentype');
+    font-weight: normal;
+}
+
 header{
     text-align: center;
     background: #000;
+    
 }
 header > h1{
     padding-top: 16px;
     font-variant: small-caps;
     font-size: 100px;
-    color: #fff;
+    font-family: 'Speed';
+    color: $primary-text-color;
 }
 header > h2{
-    margin-top:16px;
-    padding: 6px 0px 16px 0px;
-    color: #fff;
+    padding: 6px 0px 36px 0px;
+    color: $primary-text-color;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
 }
 nav{
     text-align: center;
     padding: 20px;
     background: #000;
-    box-shadow: 0px 0px 5px rgba(255, 251, 251, 0.705);
 }
 nav > a{
     padding: 16px;
@@ -25,5 +34,13 @@ nav > a{
     text-decoration: none;
     font-weight: bold;
     transition-duration: 0.5s;
+    font-family: 'Speed';
+    color: $primary-text-color;
+    text-decoration: none;
+}
+
+a:hover{
+    color: $terciary-text-color;
+    background: $primary-background-color;
 }
 
