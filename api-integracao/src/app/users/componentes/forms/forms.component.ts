@@ -5,29 +5,31 @@ import { User } from '../../models/user';
 @Component({
   selector: 'app-forms',
   templateUrl: './forms.component.html',
-  styleUrls: ['./forms.component.scss']
+  styleUrls: ['./forms.component.scss'],
 })
 export class FormsComponent implements OnInit {
-  public id: number = 0;
-
-  public user: any = {};
-
-  constructor(private service: UserServiceService){}
   public users!: User[];
+  public user = {} as User;
 
-  public adicionaUser(id: number, name: string, email: string, password:string, roles: string){
-    this.service.adiciona(id, name, email, password, roles);
-    console.log(this.user)
-    this.limpa();
-  }
+  constructor(private service: UserServiceService) {}
 
-  public limpa(){
-    this.user={};
-  }
 
   ngOnInit(): void {
-    this.service.emitEvent.subscribe((usuario: User) => {
-      this.user = usuario;
+    this.service.emitEvent.subscribe((data) => {
+      this.user = data;
+    });
+  }
+
+  //esse é um evento assincrono
+  public getUserByName() {
+    this.service.getUsersByName(this.user.name).subscribe((data) => {
+      this.users = data;
+    });
+  }
+
+  public insertUser(){
+    this.service.saveUser(this.user).subscribe((data)=>{
+      console.log(data);
     });
   }
 }

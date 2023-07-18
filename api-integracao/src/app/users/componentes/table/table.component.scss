@@ -1,0 +1,25 @@
+@import "../../../../dist/SCSS/variaveis.scss";
+.lista-container {
+  margin: auto;
+  margin-top: 80px;
+  width: 850px;
+  height: 450px;
+  flex-shrink: 0;
+  border-radius: 20px;
+
+  box-shadow: 7px 7px 15px 0px rgba(0, 0, 0, 0.342);
+
+  h2 {
+    width: 403px;
+    height: 43px;
+    color: #212121;
+    font-family: Prata;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+    padding-top: 33px;
+    margin-left: 25%;
+  }
+}

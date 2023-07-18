@@ -8,9 +8,8 @@
       id="name"
       placeholder="Digite o nome do usuário"
       [(ngModel)]="user.name"
-      #inputName
     />
-    <button>Search</button>
+    <button (click)="getUserByName()">Search</button>
   </div>
 
   <div class="componente">
@@ -21,7 +20,6 @@
       id="email"
       placeholder="Digite o e-mail do usuário"
       [(ngModel)]="user.email"
-      #inputEmail
     />
   </div>
   <div class="componente">
@@ -32,20 +30,22 @@
       id="senha"
       placeholder="Digite a senha do usuário"
       [(ngModel)]="user.password"
-      #inputPassword
     />
   </div>
   <label>
-    <input type="radio" name="genero" value="admin" [(ngModel)]="user.roles"
-    #inputRole/>
+    <input
+      type="radio"
+      name="genero"
+      value="ADMIN,USER"
+      [(ngModel)]="user.roles"
+    />
     ADM
   </label>
   <label>
-    <input type="radio" name="genero" value="user"[(ngModel)]="user.roles"
-    #inputRole />
+    <input type="radio" name="genero" value="USER" [(ngModel)]="user.roles" />
     USER
   </label>
   <div class="botao">
-    <button class="salvar" (click)="adicionaUser(id, inputName.value, inputEmail.value, inputPassword.value, inputRole.value)">Salvar</button>
+    <button class="salvar" (click)="insertUser()">Salvar</button>
   </div>
 </div>

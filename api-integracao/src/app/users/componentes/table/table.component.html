@@ -1,23 +1,23 @@
 <div class="lista-container">
-    <h2>Lista de usuários</h2>
-    <table>
-        <tr>
-            <th>Nome medicamento</th>
-            <th>Valor</th>
-            <th>Ações</th>
-        </tr>
-        <tbody>
-            <tr *ngFor="let u of users; let i = index">
-                <td>{{u.name}}</td>
-                <td>{{u.email}}</td>
-                <td>{{u.roles}}</td>
-                <td>
-                    <button class="carregar">Carregar</button>
-                </td>
-                <td>
-                    <button class="deletar" (click)="deleteItem(i)">Deletar</button>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+  <h2>Lista de usuários</h2>
+  <table>
+    <tr>
+      <th>Nome medicamento</th>
+      <th>Valor</th>
+      <th>Ações</th>
+    </tr>
+    <tbody>
+      <tr *ngFor="let u of users">
+        <td>{{ u.name }}</td>
+        <td>{{ u.email }}</td>
+        <td>{{ u.roles }}</td>
+        <td>
+          <button class="carregar" (click)="editaUser(u)">Carregar</button>
+        </td>
+        <td>
+          <button class="deletar" (click)="deleteItem(u)">Deletar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>

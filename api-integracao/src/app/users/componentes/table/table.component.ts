@@ -12,14 +12,22 @@ export class TableComponent implements OnInit{
   constructor(private service: UserServiceService){}
   public users!: User[];
 
-  public deleteItem(event: number) {
-    return this.users.splice(event, 1);
-  }
-
   ngOnInit(): void {
-    this.service.getUser().subscribe((data) => {
+    this.service.listAll().subscribe((data) => {
       this.users = data;
     });
+  }
+
+  public deleteItem(user: User) {
+    this.service.delete(user).subscribe(()=>{
+      this.service.listAll().subscribe((data) => {
+        this.users = data;
+      });
+    })
+  }
+
+  public editaUser(user:User){
+    this.service.selectUser(user);
   }
 
 }

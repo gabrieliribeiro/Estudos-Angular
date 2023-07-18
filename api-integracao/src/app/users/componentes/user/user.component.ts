@@ -1,18 +1,13 @@
-import { Component } from '@angular/core';
-import { UserServiceService } from '../../service/user-service.service';
+import { HttpClient } from '@angular/common/http';
+import { Component, EventEmitter, Injectable } from '@angular/core';
+import { User } from '../../models/user';
+import { Observable, Subject } from 'rxjs';
 
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',
-  styleUrls: ['./user.component.scss']
+  styleUrls: ['./user.component.scss'],
 })
 export class UserComponent {
 
-  constructor(private service: UserServiceService){}
-
-  public getUsers(){
-    this.service.getUser().subscribe((data)=>{
-      console.log(data);
-    });
-  }
 }
