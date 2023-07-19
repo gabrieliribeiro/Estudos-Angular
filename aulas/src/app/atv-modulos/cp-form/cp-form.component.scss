@@ -1,108 +1,108 @@
 .form-container {
-    margin: auto;
-    margin-top: 36px;
-    width: 1121px;
-    height: 550px;
-    flex-shrink: 0;
-    border-radius: 20px;
-    background: #f6f6f6;
-    box-shadow: 7px 7px 15px 0px rgba(0, 0, 0, 0.08);
-    
-    h2 {
-        width: 85%;
-        height: 43px;
-        color: #212121;
-        font-family: Prata;
-        font-size: 32px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-        text-align: center;
-        padding-top: 33px;
-        margin-left: 96px;
-    }
+  margin: auto;
+  margin-top: 36px;
+  width: 1121px;
+  height: 550px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: #f6f6f6;
+  box-shadow: 7px 7px 15px 0px rgba(0, 0, 0, 0.08);
+
+  h2 {
+    width: 85%;
+    height: 43px;
+    color: #212121;
+    font-family: Prata;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+    padding-top: 33px;
+    margin-left: 96px;
+  }
 }
 
 .componente {
-    margin-top: 44px;
-  
-    label {
-      display: flex;
-      width: 109px;
-      margin-top: 29px;
-      margin-bottom: 8px;
-      margin-left: 96px;
-      flex-direction: column;
-      justify-content: center;
-      flex-shrink: 0;
-      color: #212121;
-      font-family: "Montserrat", sans-serif;
-      font-size: 18px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: normal;
-    }
-  
-    input {
-      background-color: #fff;
-      box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
-      width: 930px;
-      height: 80px;
-      border: none;
-      border: none;
-      font-size: 24px;
-      padding: 24px;
-      margin-left: 96px;
-      box-sizing: border-box;
-    }
+  margin-top: 44px;
 
-    input[type="text"]::placeholder,
-    input[type="number"]::placeholder {
-        display: flex;
-        width: 328px;
-        flex-direction: column;
-        justify-content: center;
-        flex-shrink: 0;
-        color: #a4a4a4;
-        font-family: "Montserrat", sans-serif;
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-      }
+  label {
+    display: flex;
+    width: 109px;
+    margin-top: 29px;
+    margin-bottom: 8px;
+    margin-left: 96px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #212121;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  input {
+    background-color: #fff;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
+    width: 930px;
+    height: 80px;
+    border: none;
+    border: none;
+    font-size: 24px;
+    padding: 24px;
+    margin-left: 96px;
+    box-sizing: border-box;
+  }
+
+  input[type="text"]::placeholder,
+  input[type="number"]::placeholder {
+    display: flex;
+    width: 328px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #a4a4a4;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
 }
 
 .cadastro {
-    width: 167px;
-    height: 80px;
-    flex-shrink: 0;
-    background-color: #467f8c;
-    cursor: pointer;
-    color: #fff;
-    border-radius: 10px;
-    padding: 32px;
-    border: none;
-    margin-left: 96px;
-    margin-top: 40px;
-    display: flex;
-  
-    flex-direction: column;
-    justify-content: center;
-  
-    font-family: "Montserrat", sans-serif;
-  
-    text-align: center;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-  }
-  
-  .cadastro:hover {
-    background-color: #274b59;
+  width: 167px;
+  height: 80px;
+  flex-shrink: 0;
+  background-color: #467f8c;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 10px;
+  padding: 32px;
+  border: none;
+  margin-left: 96px;
+  margin-top: 40px;
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+
+  font-family: "Montserrat", sans-serif;
+
+  text-align: center;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
-  
-  .cadastro[disabled] {
-    background-color: #CCCCCC;
-    cursor: not-allowed;
-  }
+
+.cadastro:hover {
+  background-color: #274b59;
+}
+
+.cadastro[disabled] {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}

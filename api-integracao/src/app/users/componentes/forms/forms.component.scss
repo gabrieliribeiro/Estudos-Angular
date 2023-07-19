@@ -1,21 +1,20 @@
 @import "../../../../dist/SCSS/variaveis.scss";
 
-
 .form-container {
   margin: auto;
   margin-top: 50px;
   width: 1050px;
-  height: 450px;
+  height: 650px;
   flex-shrink: 0;
   border-radius: 20px;
-  background: $primary-color;
-  box-shadow: 7px 7px 15px 0px rgba(148, 148, 148, 0.459);
+  background: $sixth-color;
+  box-shadow: 7px 7px 15px 0px rgba(65, 64, 64, 0.459);
 
   h2 {
     width: 806px;
     height: 43px;
     color: $fourth-color;
-    font-family: 'Quicksand', sans-serif;
+    font-family: "Quicksand", sans-serif;
     font-size: 32px;
     font-style: normal;
     font-weight: 400;
@@ -26,4 +25,147 @@
   }
 }
 
+.componente {
+  margin-top: 24px;
+
+  label {
+    display: flex;
+    width: 109px;
+    margin-top: 29px;
+    margin-bottom: 8px;
+    margin-left: 96px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #212121;
+    font-family: "Quicksand", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    background-color: $primary-color;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
+    width: 800px;
+    height: 60px;
+    border: none;
+    border-radius: 6px;
+    font-size: 20px;
+    padding: 24px;
+    margin-left: 96px;
+    box-sizing: border-box;
+  }
+
+  input[type="text"]::placeholder,
+  input[type="password"]::placeholder {
+    display: flex;
+    width: 328px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #a4a4a4;
+    font-family: "Quicksand", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .radio-group {
+    display: flex;
+    align-items: center;
+  }
+  
+  .radio-group label[for="roles"] {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    display: inline-block;
+    text-align: left;
+    width: 100px;
+    height: 40px;
+  }
+
+  .radio-group label[for="roles-title"] {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    display: inline-block;
+    text-align: left;
+    width: 150px;
+    height: 40px;
+  }
+  
+  .radio-group input[type="radio"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid $terciary-color;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 6px;
+    vertical-align: middle;
+    cursor: pointer;
+  }
+  
+  .radio-group input[type="radio"]:checked {
+    background-color: #467f8c;
+  }
+  
+  .radio-group input[type="radio"]:hover {
+    background-color: #274b59;
+  }
+  
+}
+
+.busca {
+  margin-left: 6px;
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  border: none;
+  background: $serch-color;
+}
+.busca:hover {
+  background: $hover-search;
+}
+
+.botao button{
+  width: 126px;
+  height: 60px;
+  flex-shrink: 0;
+  background-color: $save-color;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 10px;
+  padding: 32px;
+  border: none;
+  margin-left: 96px;
+  margin-top: 36px;
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+
+  font-family: 'Quicksand';
+
+  text-align: center;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.botao button:hover{
+  background: $save-hover;
+}
 

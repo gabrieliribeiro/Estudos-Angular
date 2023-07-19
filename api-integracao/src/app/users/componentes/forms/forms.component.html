@@ -9,10 +9,7 @@
       placeholder="Digite o nome do usuário"
       [(ngModel)]="user.name"
     />
-    <button (click)="getUserByName()">Search</button>
-  </div>
-
-  <div class="componente">
+    <button class="busca" (click)="getUserByName()"><i class="fa-solid fa-magnifying-glass fa-2xl" style="color: #ffffff;"></i></button>
     <label for="email">E-mail</label>
     <input
       type="text"
@@ -21,8 +18,6 @@
       placeholder="Digite o e-mail do usuário"
       [(ngModel)]="user.email"
     />
-  </div>
-  <div class="componente">
     <label for="senha">Senha</label>
     <input
       type="password"
@@ -31,20 +26,22 @@
       placeholder="Digite a senha do usuário"
       [(ngModel)]="user.password"
     />
+  <div class="radio-group">
+    <label for="roles-title">Tipo de usuário</label>
+    <label for="roles">
+      <input
+        type="radio"
+        name="roles"
+        value="ADMIN,USER"
+        [(ngModel)]="user.roles"
+      />
+      ADM
+    </label>
+    <label for="roles">
+      <input type="radio" name="roles" value="USER" [(ngModel)]="user.roles" />
+      USER
+    </label>
   </div>
-  <label>
-    <input
-      type="radio"
-      name="genero"
-      value="ADMIN,USER"
-      [(ngModel)]="user.roles"
-    />
-    ADM
-  </label>
-  <label>
-    <input type="radio" name="genero" value="USER" [(ngModel)]="user.roles" />
-    USER
-  </label>
   <div class="botao">
     <button class="salvar" (click)="insertUser()">Salvar</button>
   </div>
