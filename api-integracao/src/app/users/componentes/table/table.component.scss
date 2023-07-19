@@ -24,24 +24,50 @@
     margin-left: 13%;
   }
 
-  th, td{
+  th,
+  td {
     padding: 8px;
     text-align: center;
     border-bottom: 1px solid #ddd;
-}
+  }
 
-table{
+  table {
     text-align: center;
     width: 80%;
     margin: auto;
     min-width: 300px;
     margin-top: 30px;
-    font-family: 'Quicksand';   
-}
+    font-family: "Quicksand";
+  }
 
-tbody {
+  tbody {
     display: table-row-group;
     vertical-align: middle;
     border-color: inherit;
+  }
 }
+
+.carregar{
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+  border: none;
+  background: $edit-color;
+}
+
+.carregar:hover {
+  background: $edit-hover;
+}
+
+.deletar{
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+  border: none;
+  background: $delete-color;
+  margin-left: -40px;
+}
+
+.deletar:hover {
+  background: $delete-hover;
 }

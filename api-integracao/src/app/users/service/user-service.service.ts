@@ -23,6 +23,12 @@ export class UserServiceService {
     return this.http.get<User[]>(url);
   }
 
+  public getUsers(): Observable<User[]> {
+    let url = `http://localhost:8080/usuarios`;
+    this.http.get<User[]>(this.urlBase).subscribe(users => this.usersSubject.next(users));
+    return this.usersSubject.asObservable();
+  }
+
   public listAll(): Observable<User[]> {
     this.http
       .get<User[]>(this.urlBase)
@@ -52,5 +58,13 @@ export class UserServiceService {
 
   public delete(user: User): Observable<void> {
     return this.http.delete<void>(`${this.urlBase}/${user.id}`, this.httpOptions)
+  }
+
+  public editUser(user: User): Observable<User> {
+    return this.http.put<User>(`${this.urlBase}/${user.id}`, JSON.stringify(user), this.httpOptions).pipe(
+      tap(() => {
+        this.getUsers();
+      })
+    ); 
   }
 }

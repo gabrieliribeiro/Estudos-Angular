@@ -13,7 +13,6 @@ export class FormsComponent implements OnInit {
 
   constructor(private service: UserServiceService) {}
 
-
   ngOnInit(): void {
     this.service.emitEvent.subscribe((data) => {
       this.user = data;
@@ -28,8 +27,15 @@ export class FormsComponent implements OnInit {
   }
 
   public insertUser(){
-    this.service.saveUser(this.user).subscribe((data)=>{
-      console.log(data);
-    });
+    if(this.user.id) {
+      this.service.editUser(this.user).subscribe((data) => {
+        console.log(data);
+      })
+    } else {
+      this.service.saveUser(this.user).subscribe((data) => {
+        console.log(data);
+      });
+    }
+    this.user = {} as User;
   }
 }
