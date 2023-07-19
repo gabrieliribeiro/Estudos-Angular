@@ -16,6 +16,20 @@ export class UserServiceService {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
   };
 
+  private httpOptionsToken = {
+    headers: new HttpHeaders({ 'Content-Type': 'application/json' }), 
+    responseType: 'text' as 'json'
+  };
+
+  public getToken(): Observable<string>{
+    let url = "http://localhost:8080/auth/token";
+    let userLogin = {
+      email:"gabrieli@gmail.com",
+      password:"123"
+    }
+    return this.http.post<string>(url, userLogin, this.httpOptionsToken);
+  }
+
   constructor(private http: HttpClient) {}
 
   getUser(): Observable<User[]> {
@@ -24,7 +38,7 @@ export class UserServiceService {
   }
 
   public getUsers(): Observable<User[]> {
-    let url = `http://localhost:8080/usuarios`;
+    let url = `http://localhost:8080/user`;
     this.http.get<User[]>(this.urlBase).subscribe(users => this.usersSubject.next(users));
     return this.usersSubject.asObservable();
   }

@@ -6,13 +6,13 @@
         <th>Ações</th>
       </tr>
       <tbody>
-        <tr>
-          <td>Brasil</td>
+        <tr *ngFor="let p of paises">
+          <td>{{p.name}}</td>
           <td>
-            <button class="carregar"><i class="fa-sharp fa-solid fa-arrow-up fa-lg" style="color: #fafafa;"></i></button>
+            <button class="carregar" (click)="editaUser(p)"><i class="fa-sharp fa-solid fa-arrow-up fa-lg" style="color: #fafafa;"></i></button>
           </td>
           <td>
-            <button class="deletar"><i class="fa-solid fa-trash fa-lg" style="color: #ffffff;"></i></button>
+            <button class="deletar" (click)="deleteItem(p)"><i class="fa-solid fa-trash fa-lg" style="color: #ffffff;"></i></button>
           </td>
         </tr>
       </tbody>

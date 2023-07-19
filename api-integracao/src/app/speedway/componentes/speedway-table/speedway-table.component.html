@@ -1,0 +1,24 @@
+<div class="lista-container">
+    <h2>Lista de usuários</h2>
+    <table>
+      <tr>
+        <th>Nome</th>
+        <th>Tamanho</th>
+        <th>País</th>
+        <th>Ações</th>
+      </tr>
+      <tbody>
+        <tr *ngFor="let pista of pistas">
+          <td>{{pista.name}}</td>
+          <td>{{pista.tamanho}}</td>
+          <td>{{pista.pais.name}}</td>
+          <td>
+            <button class="carregar"><i class="fa-sharp fa-solid fa-arrow-up fa-lg" style="color: #fafafa;"></i></button>
+          </td>
+          <td>
+            <button class="deletar"><i class="fa-solid fa-trash fa-lg" style="color: #ffffff;"></i></button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

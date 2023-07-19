@@ -7,7 +7,8 @@
         name="name"
         id="name"
         placeholder="Digite o nome do país"
+        [(ngModel)]="pais.name"
       />
-      <button>Salvar <i class="fa-solid fa-floppy-disk fa-lg" style="color: #ffffff; margin-left: 16px"></i> </button>
+      <button (click)="insertPais()">Salvar <i class="fa-solid fa-floppy-disk fa-lg" style="color: #ffffff; margin-left: 16px"></i> </button>
     </div>
 </div>

@@ -4,10 +4,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeModule } from './home/home.module';
-import { UsersModule } from './users/users.module';
 import {HttpClientModule} from '@angular/common/http';
 import { MenusModule } from './menus/menus.module';
 import { PaisesModule } from './paises/paises.module';
+import { UsersModule } from './users/users.module';
+import { SpeedwayModule } from './speedway/speedway.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,9 @@ import { PaisesModule } from './paises/paises.module';
     UsersModule,
     HttpClientModule,
     MenusModule,
-    PaisesModule
+    PaisesModule,
+    SpeedwayModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
