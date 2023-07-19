@@ -7,6 +7,7 @@ import { HomeModule } from './home/home.module';
 import { UsersModule } from './users/users.module';
 import {HttpClientModule} from '@angular/common/http';
 import { MenusModule } from './menus/menus.module';
+import { PaisesModule } from './paises/paises.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { MenusModule } from './menus/menus.module';
     HomeModule,
     UsersModule,
     HttpClientModule,
-    MenusModule
+    MenusModule,
+    PaisesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
