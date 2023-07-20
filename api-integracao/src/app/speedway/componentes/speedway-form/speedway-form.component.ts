@@ -10,7 +10,7 @@ import { Speedway } from '../../models/speedway';
   styleUrls: ['./speedway-form.component.scss']
 })
 export class SpeedwayFormComponent implements OnInit{
-  public pais!: Pais[];
+  public pais= {} as Pais;
   public pistas!: Speedway[];
   public pista = {} as Speedway;
   public paises: Pais[] = [];
@@ -39,6 +39,7 @@ export class SpeedwayFormComponent implements OnInit{
   ngOnInit(): void {
     this.service.selectSpeedwayEvent.subscribe((pista: Speedway)=>{
       this.pista = pista;
+      this.pais = pista.pais;
     });
 
     this.paisService.listAll().subscribe((paises: Pais[])=>{

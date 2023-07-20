@@ -10,7 +10,6 @@ import { PaisService } from 'src/app/paises/service/pais.service';
 export class SpeedwayService {
   private urlBase: string = "http://localhost:8080/pistas"
   private pistaSubject = new Subject<Speedway[]>();
-  public emitEvent = new EventEmitter();
   public selectSpeedwayEvent = new EventEmitter();
 
   constructor(private http: HttpClient) { }
@@ -31,7 +30,8 @@ export class SpeedwayService {
   }
 
   public selectPista(pista: Speedway) {
-    this.emitEvent.emit(pista);
+    this.selectSpeedwayEvent.emit(pista);
+    console.log(pista);
   }
   
 
