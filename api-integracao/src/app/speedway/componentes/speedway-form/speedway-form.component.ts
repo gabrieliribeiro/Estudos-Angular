@@ -10,24 +10,20 @@ import { Speedway } from '../../models/speedway';
   styleUrls: ['./speedway-form.component.scss']
 })
 export class SpeedwayFormComponent implements OnInit{
-  public paises!: Pais[];
+  public pais!: Pais[];
   public pistas!: Speedway[];
   public pista = {} as Speedway;
+  public paises: Pais[] = [];
 
   constructor(private service: SpeedwayService, private paisService: PaisService){}
 
-  ngOnInit(): void {
-    this.service.listAll().subscribe((data) => {
-      this.pistas = data;
-    });
-
-    this.paisService.listAll().subscribe((data) => {
-      this.paises = data;
-    });
-  }
-
 
   public insertPista(){
+    if(!this.pista.pais){
+      alert("Selecione um país para salvar");
+      return
+    }
+
     if(this.pista.id) {
       this.service.editSpeedway(this.pista).subscribe((data) => {
         console.log(data);
@@ -38,5 +34,15 @@ export class SpeedwayFormComponent implements OnInit{
       });
     }
     this.pista = {} as Speedway;
+  }
+
+  ngOnInit(): void {
+    this.service.selectSpeedwayEvent.subscribe((pista: Speedway)=>{
+      this.pista = pista;
+    });
+
+    this.paisService.listAll().subscribe((paises: Pais[])=>{
+      this.paises = paises;
+    })
   }
 }

@@ -13,13 +13,9 @@ export class TableComponent implements OnInit {
   public token: string = 'Bearer ';
 
   ngOnInit(): void {
-    this.service.getToken().subscribe((data) => {
-      this.token += data;
-      console.log(this.token);
       this.service.listAll().subscribe((data) => {
         this.users = data;
       });
-    });
     
   }
 

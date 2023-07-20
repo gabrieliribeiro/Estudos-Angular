@@ -16,19 +16,19 @@ export class UserServiceService {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
   };
 
-  private httpOptionsToken = {
-    headers: new HttpHeaders({ 'Content-Type': 'application/json' }), 
-    responseType: 'text' as 'json'
-  };
+  // private httpOptionsToken = {
+  //   headers: new HttpHeaders({ 'Content-Type': 'application/json' }), 
+  //   responseType: 'text' as 'json'
+  // };
 
-  public getToken(): Observable<string>{
-    let url = "http://localhost:8080/auth/token";
-    let userLogin = {
-      email:"gabrieli@gmail.com",
-      password:"123"
-    }
-    return this.http.post<string>(url, userLogin, this.httpOptionsToken);
-  }
+  // public getToken(): Observable<string>{
+  //   let url = "http://localhost:8080/auth/token";
+  //   let userLogin = {
+  //     email:"gabrieli@gmail.com",
+  //     password:"123"
+  //   }
+  //   return this.http.post<string>(url, userLogin, this.httpOptionsToken);
+  // }
 
   constructor(private http: HttpClient) {}
 

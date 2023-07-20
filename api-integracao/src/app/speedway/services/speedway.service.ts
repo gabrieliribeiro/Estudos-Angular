@@ -1,7 +1,8 @@
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable } from '@angular/core';
 import { Observable, Subject, tap } from 'rxjs';
 import { Speedway } from '../models/speedway';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { PaisService } from 'src/app/paises/service/pais.service';
 
 @Injectable({
   providedIn: 'root'
@@ -9,6 +10,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class SpeedwayService {
   private urlBase: string = "http://localhost:8080/pistas"
   private pistaSubject = new Subject<Speedway[]>();
+  public selectSpeedwayEvent = new EventEmitter();
 
   constructor(private http: HttpClient) { }
 
@@ -16,13 +18,13 @@ export class SpeedwayService {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
   };
 
+  
   getPista(): Observable<Speedway[]> {
     let url = `http://localhost:8080/pistas`;
     return this.http.get<Speedway[]>(url);
   }
 
   public getPistas(): Observable<Speedway[]> {
-    let url = `http://localhost:8080/pistas`;
     this.http.get<Speedway[]>(this.urlBase).subscribe(pistas => this.pistaSubject.next(pistas));
     return this.pistaSubject.asObservable();
   }
