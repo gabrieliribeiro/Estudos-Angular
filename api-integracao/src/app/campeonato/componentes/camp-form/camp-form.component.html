@@ -1,0 +1,33 @@
+<div class="form-container">
+  <h2>Formulário para cadastro de campeonatos!</h2>
+  <div class="componente">
+    <label for="descricao">Descrição do campeonato</label>
+    <input
+      type="text"
+      name="descricao"
+      id="descricao"
+      placeholder="Informe a descrição do campeonato"
+      [(ngModel)]="campeonato.descricao"
+    />
+    <button class="busca" (click)="getCampeonatoByDescricao()">
+      <i class="fa-solid fa-magnifying-glass fa-2xl" style="color: #ffffff"></i>
+    </button>
+    <label for="ano">Ano</label>
+    <input
+      type="text"
+      name="ano"
+      id="ano"
+      placeholder="Digite o ano do campeonato"
+      [(ngModel)]="campeonato.ano"
+    />
+    <div class="botao">
+      <button class="salvar" (click)="insertCampeonato()">
+        Salvar
+        <i
+          class="fa-solid fa-floppy-disk fa-lg"
+          style="color: #ffffff; margin-left: 16px"
+        ></i>
+      </button>
+    </div>
+  </div>
+</div>
