@@ -1,1 +1,23 @@
-<p>piloto-form works!</p>
+<div class="form-container">
+    <h2>Preencha os dados para cadastrar a piloto!</h2>
+    <div class="componente">
+      <label for="nome">Nome</label>
+      <input type="text" name="nome" id="nome" [(ngModel)]="piloto.nome" placeholder="Digite o nome">
+      <button class="busca"><i class="fa-solid fa-magnifying-glass fa-2xl" style="color: #ffffff;"></i></button>
+    </div>
+      <div class="lista-suspensa">
+        <label for="pais">Equipe</label>
+        <select name="equipe" id="equipe" [(ngModel)]="piloto.equipe" required>
+          <option *ngFor="let equipe of equipes" [ngValue]="equipe" [selected]="equipe.id == equipe.id">{{equipe.nome}}</option>
+      </select>
+      </div>
+      <div class="lista-suspensa">
+        <label for="pais">País</label>
+        <select name="pais" id="pais" [(ngModel)]="piloto.pais" required>
+          <option *ngFor="let pais of paises" [ngValue]="pais" [selected]="pais.id == pais.id">{{pais.name}}</option>
+      </select>
+      </div>
+      <div class="botao">
+        <button class="salvar" (click)="insertPiloto()">Salvar<i class="fa-solid fa-floppy-disk fa-lg" style="color: #ffffff; margin-left: 16px"></i></button>
+      </div>
+</div>

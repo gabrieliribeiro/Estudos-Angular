@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { PilotoFormComponent } from './componentes/piloto-form/piloto-form.component';
 import { PilotoComponent } from './componentes/piloto/piloto.component';
 import { PilotoTableComponent } from './componentes/piloto-table/piloto-table.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -13,7 +14,8 @@ import { PilotoTableComponent } from './componentes/piloto-table/piloto-table.co
     PilotoTableComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
   exports:[
     PilotoComponent

@@ -42,8 +42,8 @@ export class SpeedwayFormComponent implements OnInit{
       this.pais = pista.pais;
     });
 
-    this.paisService.listAll().subscribe((paises: Pais[])=>{
+    this.paisService.listAll().subscribe((paises: Pais[]) => {
       this.paises = paises;
-    })
+    });
   }
 }

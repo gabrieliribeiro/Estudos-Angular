@@ -11,6 +11,7 @@ import { UsersModule } from './users/users.module';
 import { SpeedwayModule } from './speedway/speedway.module';
 import { EquipesModule } from './equipes/equipes.module';
 import { CampeonatoModule } from './campeonato/campeonato.module';
+import { PilotoModule } from './piloto/piloto.module';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { CampeonatoModule } from './campeonato/campeonato.module';
     PaisesModule,
     SpeedwayModule,
     EquipesModule,
-    CampeonatoModule
+    CampeonatoModule,
+    PilotoModule
     
   ],
   providers: [],

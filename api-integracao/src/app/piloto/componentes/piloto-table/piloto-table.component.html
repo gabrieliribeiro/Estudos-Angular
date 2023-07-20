@@ -1,1 +1,24 @@
-<p>piloto-table works!</p>
+<div class="lista-container">
+    <h2>Lista de pilotos</h2>
+    <table>
+      <tr>
+        <th>Nome</th>
+        <th>Equipe</th>
+        <th>País</th>
+        <th>Ações</th>
+      </tr>
+      <tbody>
+        <tr *ngFor="let piloto of pilotos">
+          <td>{{piloto.nome}}</td>
+          <td>{{piloto.equipe}}</td>
+          <td>{{piloto.pais}}</td>
+          <td>
+            <button class="carregar" (click)="editaPiloto(piloto)"><i class="fa-sharp fa-solid fa-arrow-up fa-lg" style="color: #fafafa;"></i></button>
+          </td>
+          <td>
+            <button class="deletar" (click)="deleteItem(piloto)"><i class="fa-solid fa-trash fa-lg" style="color: #ffffff;"></i></button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
