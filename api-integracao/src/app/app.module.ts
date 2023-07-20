@@ -9,6 +9,7 @@ import { MenusModule } from './menus/menus.module';
 import { PaisesModule } from './paises/paises.module';
 import { UsersModule } from './users/users.module';
 import { SpeedwayModule } from './speedway/speedway.module';
+import { EquipesModule } from './equipes/equipes.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { SpeedwayModule } from './speedway/speedway.module';
     HttpClientModule,
     MenusModule,
     PaisesModule,
-    SpeedwayModule
+    SpeedwayModule,
+    EquipesModule
     
   ],
   providers: [],

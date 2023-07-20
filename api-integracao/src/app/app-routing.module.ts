@@ -4,6 +4,7 @@ import { HomePageComponent } from './home/home-page/home-page.component';
 import { UserComponent } from './users/componentes/user/user.component';
 import { PaisComponent } from './paises/componentes/pais/pais.component';
 import { SpeedwayComponent } from './speedway/componentes/speedway/speedway.component';
+import { EquipeComponent } from './equipes/componentes/equipe/equipe.component';
 
 
 const routes: Routes = [
@@ -11,7 +12,8 @@ const routes: Routes = [
   {path:"home", component: HomePageComponent},
   {path:"users", component: UserComponent},
   {path:"paises", component:PaisComponent},
-  {path:"speedway", component:SpeedwayComponent}
+  {path:"speedway", component:SpeedwayComponent},
+  {path:"equipes", component:EquipeComponent}
 ];
 
 @NgModule({
