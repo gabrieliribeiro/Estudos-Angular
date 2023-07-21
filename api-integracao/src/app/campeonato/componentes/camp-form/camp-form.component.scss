@@ -1,8 +1,12 @@
 @import "../../../../dist/SCSS/variaveis.scss";
 
+.container{
+  padding-top: 20px;
+}
+
 .form-container {
   margin: auto;
-  margin-top: 50px;
+  margin-top: 10px;
   width: 1050px;
   height: 480px;
   flex-shrink: 0;
