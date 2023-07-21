@@ -1,21 +1,23 @@
-<div class="form-container">
-    <h2>Preencha os dados para cadastrar a pista!</h2>
-    <div class="componente">
-      <label for="nome">Nome</label>
-      <input type="text" name="nome" id="nome" [(ngModel)]="pista.name" placeholder="Digite o nome">
-      <button class="busca"><i class="fa-solid fa-magnifying-glass fa-2xl" style="color: #ffffff;"></i></button>
-    </div>
-    <div class="componente">
-      <label for="tamanho">Tamanho</label>
-      <input type="text" name="tamanho" id="tamanho" [(ngModel)]="pista.tamanho" placeholder="Informe o tamanho">
-    </div>
-    <div class="lista-suspensa">
-        <label for="pais">País</label>
-        <select name="pais" id="pais" [(ngModel)]="pista.pais" required>
-          <option *ngFor="let opt of paises" [ngValue]="pais" [selected]="opt.id == pais.id">{{pais.name}}</option>
-      </select>
+<div class="container">
+  <div class="form-container">
+      <h2>Preencha os dados para cadastrar a pista!</h2>
+      <div class="componente">
+        <label for="nome">Nome</label>
+        <input type="text" name="nome" id="nome" [(ngModel)]="pista.name" placeholder="Digite o nome">
+        <button class="busca"><i class="fa-solid fa-magnifying-glass fa-2xl" style="color: #ffffff;"></i></button>
       </div>
-      <div class="botao">
-        <button class="salvar" (click)="insertPista()">Salvar <i class="fa-solid fa-floppy-disk fa-lg" style="color: #ffffff; margin-left: 16px"></i></button>
+      <div class="componente">
+        <label for="tamanho">Tamanho</label>
+        <input type="text" name="tamanho" id="tamanho" [(ngModel)]="pista.tamanho" placeholder="Informe o tamanho">
       </div>
+      <div class="lista-suspensa">
+          <label for="pais">País</label>
+          <select name="pais" id="pais" [(ngModel)]="pista.pais" required>
+            <option *ngFor="let opt of paises" [ngValue]="pais" [selected]="opt.id == pais.id">{{pais.name}}</option>
+        </select>
+        </div>
+        <div class="botao">
+          <button class="salvar" (click)="insertPista()">Salvar <i class="fa-solid fa-floppy-disk fa-lg" style="color: #ffffff; margin-left: 16px"></i></button>
+        </div>
+  </div>
 </div>

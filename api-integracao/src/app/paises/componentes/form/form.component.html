@@ -1,14 +1,16 @@
-<div class="form-container">
-    <h2>Formulário para cadastro de Países!</h2>
-    <div class="componente">
-      <label for="nome">Nome</label>
-      <input
-        type="text"
-        name="name"
-        id="name"
-        placeholder="Digite o nome do país"
-        [(ngModel)]="pais.name"
-      />
-      <button (click)="insertPais()">Salvar <i class="fa-solid fa-floppy-disk fa-lg" style="color: #ffffff; margin-left: 16px"></i> </button>
-    </div>
+<div class="container">
+  <div class="form-container">
+      <h2>Formulário para cadastro de Países!</h2>
+      <div class="componente">
+        <label for="nome">Nome</label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Digite o nome do país"
+          [(ngModel)]="pais.name"
+        />
+        <button (click)="insertPais()">Salvar <i class="fa-solid fa-floppy-disk fa-lg" style="color: #ffffff; margin-left: 16px"></i> </button>
+      </div>
+  </div>
 </div>

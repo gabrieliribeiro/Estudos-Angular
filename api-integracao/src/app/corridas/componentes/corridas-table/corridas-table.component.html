@@ -1,0 +1,24 @@
+<div class="lista-container">
+    <h2>Lista de usuários</h2>
+    <table>
+      <tr>
+        <th>Data</th>
+        <th>Pista</th>
+        <th>Campeonato</th>
+        <th>Ações</th>
+      </tr>
+      <tbody>
+        <tr *ngFor="let corrida of corridas">
+            <td>{{corrida.data}}</td>
+            <td>{{corrida.tamanho_pista}}</td>
+            <td>{{corrida.desc_camp}}</td>
+          <td>
+            <button class="carregar" (click)="editaCorrida(corrida)"><i class="fa-sharp fa-solid fa-arrow-up fa-lg" style="color: #fafafa;"></i></button>
+          </td>
+          <td>
+            <button class="deletar" (click)="deleteItem(corrida)"><i class="fa-solid fa-trash fa-lg" style="color: #ffffff;"></i></button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
