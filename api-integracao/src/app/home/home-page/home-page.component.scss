@@ -1,3 +1,5 @@
+@import "../../../dist/SCSS/variaveis.scss";
+
 .back{
     background-image: url('../../../assets/imagens/bg-speedtrack.png');
     background-repeat: no-repeat;
@@ -7,13 +9,123 @@
 }
 .conteudo{
     color: #fff;
-    font-size: 36px;
+    font-size: 28px;
     text-justify: auto;
     text-align: left;
     width: 780px;
-    padding: 200px 300px;
+    padding: 350px 250px;
     font-family: 'Quicksand', sans-serif;
     font-weight: 300;
     font-style: normal;
 }
 
+
+.container{
+    display: flex;
+    align-items: top; /* Center vertically */
+    padding-left: 1200px;
+    height: -1250px; 
+}
+
+.login {
+  width: 700px;
+  height: 480px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: $sixth-color;
+  box-shadow: 7px 7px 15px 0px rgba(65, 64, 64, 0.459);
+  margin-top: -670px;
+
+  h2 {
+    width: 600px;
+    height: 43px;
+    color: $fourth-color;
+    font-family: "Quicksand", sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+    padding-top: 33px;
+    margin-left: 7%;
+  }
+}
+
+.componente {
+  margin-top: 24px;
+
+  label {
+    display: flex;
+    width: 109px;
+    margin-top: 29px;
+    margin-bottom: 8px;
+    margin-left: 90px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #212121;
+    font-family: "Quicksand", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  input[type="email"],
+  input[type="password"] {
+    background-color: $primary-color;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
+    width: 500px;
+    height: 60px;
+    border: none;
+    border-radius: 6px;
+    font-size: 20px;
+    padding: 24px;
+    margin-left: 90px;
+    box-sizing: border-box;
+  }
+
+  input[type="text"]::placeholder,
+  input[type="password"]::placeholder {
+    display: flex;
+    width: 328px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #a4a4a4;
+    font-family: "Quicksand", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
+
+.botao button{
+    width: 125px;
+    height: 60px;
+    flex-shrink: 0;
+    background-color: $save-color;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 10px;
+    padding: 32px;
+    border: none;
+    margin-left: 40%;
+    margin-top: 36px;
+  
+    flex-direction: column;
+    justify-content: center;
+  
+    font-family: 'Quicksand';
+  
+    text-align: center;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  
+  .botao button:hover{
+    background: $save-hover;
+  }

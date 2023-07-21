@@ -13,6 +13,7 @@ import { EquipesModule } from './equipes/equipes.module';
 import { CampeonatoModule } from './campeonato/campeonato.module';
 import { PilotoModule } from './piloto/piloto.module';
 import { CorridasModule } from './corridas/corridas.module';
+import { LoginModule } from './login/login.module';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { CorridasModule } from './corridas/corridas.module';
     EquipesModule,
     CampeonatoModule,
     PilotoModule,
-    CorridasModule
+    CorridasModule,
+    LoginModule
     
   ],
   providers: [],
